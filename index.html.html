@@ -1,0 +1,253 @@
+                        <!DOCTYPE html>
+                        <html> 
+                        <head>
+                                <style>
+
+
+    body{
+        background-color: rgb(254, 249, 211) ;
+        font-family: Arial;
+    }
+
+
+        .capibara{
+            height: 510px;
+            cursor: pointer;
+        }
+        .morcov{
+        height: 130px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        }
+
+        .mar{
+            height: 130px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        }
+
+        .banana{
+            height: 130px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        }
+
+        .apa{
+            height: 130px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        }
+        .capsuna{
+            height: 130px;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        }
+
+        .text{
+            font-size: 30px;
+            color: rgb(244, 172, 3);
+        }
+
+        .resultat-text{ 
+            font-size: 25px;
+        }
+
+        .capibara-text{
+            font-size: 17px;
+        }
+
+        .capibara-happy{
+            height: 510px;
+        }
+
+        .capibara-sad{
+            height: 400px;
+        }
+
+        .capi{
+            font-size: 22px;
+            color: rgb(237, 202, 27);
+        }
+
+        .capibara-text{
+            font-size: 20px;
+        }
+    .js-fericire {
+        font-size: 24px;
+        font-weight: 800;
+        color: #ffffff;
+        background: linear-gradient(135deg, #ff9233 0%, #ffdb33 100%);
+        padding: 12px 30px;
+        border-radius: 50px;
+        display: inline-block;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 15px rgba(255, 146, 51, 0.4);
+    }
+                                </style> 
+                                <title>Capibara mea😍</title>
+                        </head>
+                                <body>
+                                
+                        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+                <p class="text">Mă numesc Capi și sunt capibara ta!</p>
+                <p>Hrănește-mă cu cele 5 alimente de mai jos și fă ca fericirea sa ajungă  la 100%</p>
+                <p class="capibara-text"></p>
+                <p class="capi"></p>
+                <p class="rezultat resultat-text"></p>
+    <p class="js-scorul"></p>
+
+        <img class="capibara" src="images\capibara-image.png" onclick="
+        document.querySelector('.capi')
+        .innerHTML=`Sunt Capi!`
+        ">
+
+                <button class="js-morcov buton"
+                onclick="
+                hranesteCapibara ('morcovul')
+                "
+                ><img class="morcov" src="images\morcov-buton-image.png">
+
+                </button>
+
+                <button class="js-mar buton"
+                onclick=" hranesteCapibara ('mărul')"
+                ><img class="mar" src="images\mar-buton-image.png">
+                        
+                </button>
+                
+                <button class="js-banana buton"
+                onclick=" hranesteCapibara ('banana')"
+                ><img class="banana" src="images/banana-buton-image.png">
+            </button>
+
+                <button class="js-capsuna buton"
+                onclick=" hranesteCapibara ('căpșuna')"
+                ><img class="capsuna" src="images/capsuna-buton-image.png">
+            </button>
+
+                <button class="js-apa buton"
+                onclick=" hranesteCapibara ('apa')"
+                
+                ><img class="apa" src="images/apa-buton-image.png">
+            </button>
+
+    <p class="js-fericire"></p>
+
+                        <script>
+
+
+        let scorul=  JSON.parse(localStorage.getItem
+        ('scorul')) ||{
+        placut: 0,
+    neplacut: 0,
+    fericire: 50
+    }
+    if (scorul.fericire === undefined) {
+    scorul.fericire = 50;
+    }
+
+    let preferinta=''
+    let mesaj=''
+        function hranesteCapibara (hrana) {
+        let numar= Math.random()
+        
+        if (numar>=0 && numar<0.23 ) {
+        preferinta='mărul'
+        } else if(numar>=0.23 && numar<0.36) {
+            preferinta= 'apa'
+        }else if(numar>=0.36 && numar<0.40) {
+            preferinta='căpșuna'
+        } else if(numar>=0.40 && numar< 0.55) {
+            preferinta='banana'
+        } else if (numar>=0.55 && numar<1) {
+            preferinta='morcovul'
+        }
+
+        let imagineCapibara= document.querySelector('.capibara')
+
+        
+        if(preferinta===hrana) {
+            mesaj= `Te iubesc!😍😍😍${hrana} a fost foarte bun!🤗🤗🤗`
+        imagineCapibara.src="images/capibara-image-happy.png"
+        imagineCapibara.classList.add('capibara-happy')
+        scorul.placut+=1
+        scorul.fericire+=15
+        if(scorul.fericire>100) {
+            scorul.fericire=100;
+        }
+        } else{
+            mesaj=`Nu îmi place ${hrana}! Vreau alt ceva!`
+            imagineCapibara.src="images/sad-capibara-imagine.png"
+            imagineCapibara.classList.add('capibara-sad')
+            scorul.neplacut+=1
+            scorul.fericire-=2; 
+            if(scorul.fericire<0) {
+        scorul.fericire=0
+            }
+        }
+        document.querySelector('.rezultat')
+        .innerHTML= mesaj
+    document.querySelector('.js-fericire')
+    .innerHTML=`Fericire: ${scorul.fericire}%`
+    localStorage.setItem('scorul',JSON.stringify(scorul))
+    document.querySelector('.js-scorul')
+    .innerHTML=`Mia placut:${scorul.placut}  Nu mi-a placut:${scorul.neplacut}`
+    localStorage.setItem('scorul', JSON.stringify(scorul))
+    document.querySelector('.js-scorul')
+    .innerHTML= `Mi-a plăcut:${scorul.placut}  Nu mi-a plăcut:${scorul.neplacut}`
+
+    resetareaJocului()
+        }
+        
+
+        document.querySelector('.js-fericire').innerHTML = `Fericire: ${scorul.fericire}%`;
+    setInterval(function() {
+        if(scorul.fericire>0 && scorul.fericire<100) {
+    scorul.fericire-=1;
+        }
+        if(scorul.fericire<0) {
+            scorul.fericire=0
+        }
+
+    document.querySelector('.js-fericire')
+    .innerHTML = `Fericire: ${scorul.fericire}%`;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    resetareaJocului()
+    },10800000  );
+    function reseteazaJocul() {
+    scorul.fericire = 50;
+    scorul.placut = 0;
+    scorul.neplacut = 0;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+
+    document.querySelector('.rezultat').innerHTML = ""; 
+    document.querySelector('.js-fericire').innerHTML = `Fericire: ${scorul.fericire}%`; 
+    document.querySelector('.js-scorul').innerHTML = `Mi-a plăcut:${scorul.placut}  Nu mi-a plăcut:${scorul.neplacut}`; 
+
+    let imagineCapibara = document.querySelector('.capibara');
+    imagineCapibara.src = "images/capibara-image.png";
+    imagineCapibara.className = 'capibara';
+    }
+
+    function resetareaJocului() {
+    if(scorul.fericire >= 100) {
+        document.querySelector('.rezultat').innerHTML = "🎉 Ai câștigat! Capi este 100% fericită! 🥳 Jocul repornește în 8 secunde...";
+        setTimeout(function(){
+            reseteazaJocul(); 
+        }, 8000);
+    } else if(scorul.fericire <= 0){
+        document.querySelector('.rezultat').innerHTML = "😢 Joc pierdut... Capi a adormit supărată. Repornim în 8 secunde...";
+        setTimeout(function() {
+            reseteazaJocul();
+        }, 8000);
+    }
+    }
+
+                        </script>
+                        </body>
+                        </html>
