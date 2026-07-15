@@ -88,14 +88,58 @@
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         box-shadow: 0 4px 15px rgba(255, 146, 51, 0.4);
     }
+
+    .js-input {
+    padding: 15px;
+    border: 2px dashed #ff9233;
+    border-radius: 10px;
+    background-color: #fff9e6;
+    color: #555;
+    font-weight: bold;
+}
+
+.js-input::placeholder {
+    color: #ffb77a;
+}
+.container-input {
+    display: flex;         
+    justify-content: center; 
+    align-items: center;   
+    gap: 10px;              
+    margin-top: 20px;       
+    margin-left: 50px;      
+}
+.buton-feed {
+    padding: 12px 25px; 
+    background-color: #ff9233; 
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+
+.buton-feed:hover {
+    background-color: #ff7f00;
+    transform: scale(1.05); 
+}
+
+
+.buton-feed:active {
+    transform: scale(0.95); 
+}
                                 </style> 
-                                <title>Capibara mea😍</title>
+                                <title>My Capybara😍</title>
+                                <meta name="description" content="A cute virtual pet game where you take care of a capybara. Feed it, play with it, and enjoy relaxing moments!">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         </head>
                                 <body>
                                 
                         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-                <p class="text">Mă numesc Capi și sunt capibara ta!</p>
-                <p>Hrănește-mă cu cele 5 alimente de mai jos și fă ca fericirea sa ajungă  la 100%</p>
+                <p class="text">I am Capy and I am your virtual pet!</p>
+                <p>You can feed me with these 5 treats!</p>
                 <p class="capibara-text"></p>
                 <p class="capi"></p>
                 <p class="rezultat resultat-text"></p>
@@ -103,19 +147,19 @@
 
         <img class="capibara" src="images\capibara-image.png" onclick="
         document.querySelector('.capi')
-        .innerHTML=`Sunt Capi!`
+        .innerHTML=`I am Capy!`
         ">
 
                 <button class="js-morcov buton"
                 onclick="
-                hranesteCapibara ('morcovul')
+                hranesteCapibara ('carrot')
                 "
                 ><img class="morcov" src="images\morcov-buton-image.png">
 
                 </button>
 
                 <button class="js-mar buton"
-                onclick=" hranesteCapibara ('mărul')"
+                onclick=" hranesteCapibara ('apple')"
                 ><img class="mar" src="images\mar-buton-image.png">
                         
                 </button>
@@ -126,18 +170,22 @@
             </button>
 
                 <button class="js-capsuna buton"
-                onclick=" hranesteCapibara ('căpșuna')"
+                onclick=" hranesteCapibara ('strawbery')"
                 ><img class="capsuna" src="images/capsuna-buton-image.png">
             </button>
 
                 <button class="js-apa buton"
-                onclick=" hranesteCapibara ('apa')"
+                onclick=" hranesteCapibara ('water')"
                 
                 ><img class="apa" src="images/apa-buton-image.png">
             </button>
 
     <p class="js-fericire"></p>
-
+    <div class="container-input">
+ <input class="js-input" placeholder="Type the name of the treat" >
+<button onclick="inputulJucator()" class="buton-feed">Feed Capy!</button>
+</div>
+<p id="mesaj-afisat"></p>
                         <script>
 
 
@@ -157,22 +205,22 @@
         let numar= Math.random()
         
         if (numar>=0 && numar<0.23 ) {
-        preferinta='mărul'
+        preferinta='apple'
         } else if(numar>=0.23 && numar<0.36) {
-            preferinta= 'apa'
+            preferinta= 'water'
         }else if(numar>=0.36 && numar<0.40) {
-            preferinta='căpșuna'
+            preferinta='strawbery'
         } else if(numar>=0.40 && numar< 0.55) {
             preferinta='banana'
         } else if (numar>=0.55 && numar<1) {
-            preferinta='morcovul'
+            preferinta='carrot'
         }
 
         let imagineCapibara= document.querySelector('.capibara')
 
         
         if(preferinta===hrana) {
-            mesaj= `Te iubesc!😍😍😍${hrana} a fost foarte bun!🤗🤗🤗`
+            mesaj= `I love you!😍😍😍${hrana} was very good!🤗🤗🤗`
         imagineCapibara.src="images/capibara-image-happy.png"
         imagineCapibara.classList.add('capibara-happy')
         scorul.placut+=1
@@ -181,7 +229,7 @@
             scorul.fericire=100;
         }
         } else{
-            mesaj=`Nu îmi place ${hrana}! Vreau alt ceva!`
+            mesaj=`I don't want ${hrana}! I want something else!`
             imagineCapibara.src="images/sad-capibara-imagine.png"
             imagineCapibara.classList.add('capibara-sad')
             scorul.neplacut+=1
@@ -193,19 +241,19 @@
         document.querySelector('.rezultat')
         .innerHTML= mesaj
     document.querySelector('.js-fericire')
-    .innerHTML=`Fericire: ${scorul.fericire}%`
+    .innerHTML=`Happines: ${scorul.fericire}%`
     localStorage.setItem('scorul',JSON.stringify(scorul))
     document.querySelector('.js-scorul')
-    .innerHTML=`Mia placut:${scorul.placut}  Nu mi-a placut:${scorul.neplacut}`
+    .innerHTML=`I liked:${scorul.placut}  I didn't like :${scorul.neplacut}`
     localStorage.setItem('scorul', JSON.stringify(scorul))
     document.querySelector('.js-scorul')
-    .innerHTML= `Mi-a plăcut:${scorul.placut}  Nu mi-a plăcut:${scorul.neplacut}`
+    .innerHTML= `I liked:${scorul.placut} I didn't like:${scorul.neplacut}`
 
     resetareaJocului()
         }
         
 
-        document.querySelector('.js-fericire').innerHTML = `Fericire: ${scorul.fericire}%`;
+        document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
     setInterval(function() {
         if(scorul.fericire>0 && scorul.fericire<100) {
     scorul.fericire-=1;
@@ -215,7 +263,7 @@
         }
 
     document.querySelector('.js-fericire')
-    .innerHTML = `Fericire: ${scorul.fericire}%`;
+    .innerHTML = `Happines: ${scorul.fericire}%`;
     localStorage.setItem('scorul', JSON.stringify(scorul));
     resetareaJocului()
     },10800000  );
@@ -226,8 +274,8 @@
     localStorage.setItem('scorul', JSON.stringify(scorul));
 
     document.querySelector('.rezultat').innerHTML = ""; 
-    document.querySelector('.js-fericire').innerHTML = `Fericire: ${scorul.fericire}%`; 
-    document.querySelector('.js-scorul').innerHTML = `Mi-a plăcut:${scorul.placut}  Nu mi-a plăcut:${scorul.neplacut}`; 
+    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`; 
+    document.querySelector('.js-scorul').innerHTML = `I liked:${scorul.placut}  I didn't like:${scorul.neplacut}`; 
 
     let imagineCapibara = document.querySelector('.capibara');
     imagineCapibara.src = "images/capibara-image.png";
@@ -236,16 +284,48 @@
 
     function resetareaJocului() {
     if(scorul.fericire >= 100) {
-        document.querySelector('.rezultat').innerHTML = "🎉 Ai câștigat! Capi este 100% fericită! 🥳 Jocul repornește în 8 secunde...";
+        document.querySelector('.rezultat').innerHTML = "🎉 You won! Capy is 100% happy! 🥳 Game will restart in 8 seconds...";
         setTimeout(function(){
             reseteazaJocul(); 
         }, 8000);
     } else if(scorul.fericire <= 0){
-        document.querySelector('.rezultat').innerHTML = "😢 Joc pierdut... Capi a adormit supărată. Repornim în 8 secunde...";
+        document.querySelector('.rezultat').innerHTML = "😢You lost... Capy went to sleep. Game will restart in 8 seconds...";
         setTimeout(function() {
             reseteazaJocul();
         }, 8000);
     }
+    }
+     let valoareInput=document.querySelector('.js-input')
+     function inputulJucator() {
+           let imagineCapibara= document.querySelector('.capibara')
+        let valoareJucator = valoareInput.value;
+        let n= Math.random()
+        if(n>=0.5 && n<1) {
+            mesaj=`I love you!😍😍😍${valoareJucator} was very good!🤗🤗🤗`
+            scorul.fericire+=15
+            imagineCapibara.src="images/capibara-image-happy.png"
+        imagineCapibara.classList.add('capibara-happy')
+        }
+       
+        else {
+            scorul.fericire-=2
+            mesaj=`I dont want ${valoareJucator}! I want something else!`
+            imagineCapibara.src="images/sad-capibara-imagine.png"
+            imagineCapibara.classList.add('capibara-sad')
+        }
+         if (scorul.fericire > 100) {
+            scorul.fericire = 100;
+        }
+        if (scorul.fericire < 0) {
+        scorul.fericire = 0;
+        }
+         document.querySelector('.rezultat').innerHTML = mesaj;
+    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
+    
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+        inputElement.value = ""; 
+        resetareaJocului()
+     
     }
 
                         </script>
