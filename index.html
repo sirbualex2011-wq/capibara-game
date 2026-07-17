@@ -222,7 +222,10 @@ nivel:1
 if (scorul.fericire === undefined) {
 scorul.fericire = 50;
 }
-
+if (scorul.nivel === undefined) {
+    scorul.nivel = 1;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+}
 let preferinta=''
 let mesaj=''
     function hranesteCapibara (hrana) {
