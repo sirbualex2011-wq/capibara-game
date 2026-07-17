@@ -130,6 +130,29 @@
     .buton-feed:active {
     transform: scale(0.95); 
     }
+  .js-nivel {
+   display: inline-block;
+    padding: 10px 25px;
+    margin: 20px;
+    
+    background: linear-gradient(135deg, #fff9c4, #fff176);
+    border: 3px solid #ffca28;
+    border-radius: 30px;
+    
+   
+    font-size: 20px;
+    font-weight: bold;
+    color: #f57f17;
+    text-transform: uppercase;
+    
+ 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    transition: transform 0.3s ease;
+}
+.js-nivel:hover {
+    transform: scale(1.05);
+}
                                 </style> 
                                 <title>My Capybara😍</title>
                                 <meta name="description" content="A cute virtual pet game where you take care of a capybara. Feed it, play with it, and enjoy relaxing moments!">
@@ -178,7 +201,8 @@
                 onclick=" hranesteCapibara ('water')"
                 ><img class="apa" src="images/apa-buton-image.png">
             </button>
-
+ 
+<p class="js-nivel">Level: 1</p>
     <p class="js-fericire"></p>
     <div class="container-input">
     <input class="js-input" placeholder="Type the name of the treat" >
@@ -192,7 +216,8 @@
         ('scorul')) ||{
         placut: 0,
     neplacut: 0,
-    fericire: 50
+    fericire: 50,
+    nivel:1
     }
     if (scorul.fericire === undefined) {
     scorul.fericire = 50;
@@ -282,6 +307,8 @@
 
     function resetareaJocului() {
     if(scorul.fericire >= 100) {
+       scorul.nivel = (scorul.nivel || 1) + 1;
+        document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
         document.querySelector('.rezultat').innerHTML = "🎉 You won! Capy is 100% happy! 🥳 Game will restart in 8 seconds...";
         setTimeout(function(){
             reseteazaJocul(); 
@@ -319,9 +346,8 @@
         }
             document.querySelector('.rezultat').innerHTML = mesaj;
     document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
-
     localStorage.setItem('scorul', JSON.stringify(scorul));
-        inputElement.value = ""; 
+        valoareInput.value = ""; 
         resetareaJocului() 
     }   
                         </script>
