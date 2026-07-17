@@ -96,45 +96,45 @@
     background-color: #fff9e6;
     color: #555;
     font-weight: bold;
-}
+    }
 
-.js-input::placeholder {
+    .js-input::placeholder {
     color: #ffb77a;
-}
-.container-input {
+    }
+    .container-input {
     display: flex;         
     justify-content: center; 
     align-items: center;   
     gap: 10px;              
     margin-top: 25px;       
     margin-left: 53px;      
-}
-.buton-feed {
+    }
+    .buton-feed {
     padding: 17px 27px; 
-    background-color: #ff9233; 
+    background-color: #f08221; 
     color: white;
     font-weight: bold;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s;
-}
+    }
 
 
-.buton-feed:hover {
+    .buton-feed:hover {
     background-color: #ff7f00;
     transform: scale(1.05); 
-}
+    }
 
 
-.buton-feed:active {
+    .buton-feed:active {
     transform: scale(0.95); 
-}
+    }
                                 </style> 
                                 <title>My Capybara😍</title>
                                 <meta name="description" content="A cute virtual pet game where you take care of a capybara. Feed it, play with it, and enjoy relaxing moments!">
                                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                             <meta name="google-site-verification" content="L9KDqRZSNQi2CJXd">
+                             <meta name="google-site-verification" content="L9KDqRZSNQi2CJXd3o2ETec8p4bSKBrCNoXvuJrEu2o" />
                         </head>
                                 <body>
                                 
@@ -156,7 +156,6 @@
                 hranesteCapibara ('carrot')
                 "
                 ><img class="morcov" src="images\morcov-buton-image.png">
-
                 </button>
 
                 <button class="js-mar buton"
@@ -177,16 +176,15 @@
 
                 <button class="js-apa buton"
                 onclick=" hranesteCapibara ('water')"
-                
                 ><img class="apa" src="images/apa-buton-image.png">
             </button>
 
     <p class="js-fericire"></p>
     <div class="container-input">
- <input class="js-input" placeholder="Type the name of the treat" >
-<button onclick="inputulJucator()" class="buton-feed">Feed Capy!</button>
-</div>
-<p id="mesaj-afisat"></p>
+    <input class="js-input" placeholder="Type the name of the treat" >
+    <button onclick="inputulJucator()" class="buton-feed">Feed Capy!</button>
+    </div>
+    <p id="mesaj-afisat"></p>
                         <script>
 
 
@@ -253,7 +251,6 @@
     resetareaJocului()
         }
         
-
         document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
     setInterval(function() {
         if(scorul.fericire>0 && scorul.fericire<100) {
@@ -296,9 +293,9 @@
         }, 8000);
     }
     }
-     let valoareInput=document.querySelector('.js-input')
-     function inputulJucator() {
-           let imagineCapibara= document.querySelector('.capibara')
+        let valoareInput=document.querySelector('.js-input')
+        function inputulJucator() {
+            let imagineCapibara= document.querySelector('.capibara')
         let valoareJucator = valoareInput.value;
         let n= Math.random()
         if(n>=0.5 && n<1) {
@@ -307,28 +304,26 @@
             imagineCapibara.src="images/capibara-image-happy.png"
         imagineCapibara.classList.add('capibara-happy')
         }
-       
+        
         else {
             scorul.fericire-=2
             mesaj=`I dont want ${valoareJucator}! I want something else!`
             imagineCapibara.src="images/sad-capibara-imagine.png"
             imagineCapibara.classList.add('capibara-sad')
         }
-         if (scorul.fericire > 100) {
+            if (scorul.fericire > 100) {
             scorul.fericire = 100;
         }
         if (scorul.fericire < 0) {
         scorul.fericire = 0;
         }
-         document.querySelector('.rezultat').innerHTML = mesaj;
+            document.querySelector('.rezultat').innerHTML = mesaj;
     document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
-    
+
     localStorage.setItem('scorul', JSON.stringify(scorul));
         inputElement.value = ""; 
-        resetareaJocului()
-     
-    }
-
+        resetareaJocului() 
+    }   
                         </script>
                         </body>
                         </html>
