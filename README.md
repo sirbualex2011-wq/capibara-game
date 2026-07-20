@@ -1,20 +1,32 @@
-Capybara Game 🐹
-A cute virtual pet game where you take care of your own capybara! Feed it, play with it, and make sure it's the happiest capybara in the world.
+Hi everyone!
 
-✨ Features
-Feeding System: Keep your capybara well-fed and healthy.
+I'm excited to share that a new update for my browser game My Capybara will be released in the next few days!
 
-Playtime: Boost your capybara's happiness level.
+✨ What's coming:
 
-Minimalist Design: A relaxing and smooth experience directly in your browser.
+🏆 Achievement System
 
-🚀 How to Play
-You can play the game online here:
-[Play Capybara Game here!](https://sirbualex2011-wq.github.io/capibara-game/)
-🛠 Tech Stack
-HTML5
-CSS3
-JavaScript
+Unlock trophies by reaching different milestones.
+Earn bonus coin rewards.
+Achievement progress is saved automatically.
 
-💬 Feedback
-I’d love to hear your thoughts! If you have ideas for new features or if you find any bugs, feel free to open an Issue or reach out.
+📋 Daily Quests
+
+Feed your Capybara.
+Play the Lottery.
+Open Treasure Hunts.
+Complete every daily quest to earn a special reward.
+Quests reset every 24 hours.
+
+🛒 More progression
+
+Improved progression system.
+More reasons to come back every day.
+Better long-term gameplay experience.
+
+The game is still actively being developed, and this is only the beginning. I'm already planning even more features and minigames for future updates.
+
+🎮 You can play the current version here:
+https://sirbualex2011-wq.github.io/capibara-game/
+
+I'd love to hear your feedback and ideas before the update goes live. Thanks for checking it out! ❤️r your thoughts! If you have ideas for new features or if you find any bugs, feel free to open an Issue or reach out.
