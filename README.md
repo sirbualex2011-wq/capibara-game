@@ -1,32 +1,79 @@
-Hi everyone!
+🐹 My Capybara Game — Update #2: A More Alive World 🌿✨
 
-I'm excited to share that a new update for my browser game My Capybara will be released in the next few days!
+I’m excited to share the second major update of My Capybara, my virtual pet game where you take care of your own cute capybara, feed it, customize it, complete challenges, and build a small relationship with your virtual friend.
 
-✨ What's coming:
+This update focused on making the game feel more alive, rewarding, and enjoyable for players.
 
-🏆 Achievement System
+🌿 A New Atmosphere & Visual Improvements
 
-Unlock trophies by reaching different milestones.
-Earn bonus coin rewards.
-Achievement progress is saved automatically.
+The biggest change in this update is the new visual experience.
+
+I redesigned the background to create a warmer and more relaxing environment that fits the personality of a capybara:
+
+✨ Animated natural-style background
+☀️ Soft lighting effects
+🍃 Floating leaves
+💫 Magical particles and small visual details
+🖱️ Custom cursor for a more game-like feeling
+
+The goal was simple: when players open the game, they should feel like they are entering a small, cozy world instead of just opening a webpage.
 
 📋 Daily Quests
 
-Feed your Capybara.
-Play the Lottery.
-Open Treasure Hunts.
-Complete every daily quest to earn a special reward.
-Quests reset every 24 hours.
+A completely new progression system has been added.
 
-🛒 More progression
+Players can now complete daily objectives:
 
-Improved progression system.
-More reasons to come back every day.
-Better long-term gameplay experience.
+🥕 Feed Capybara
+🎰 Try the lottery
+🎁 Open treasure hunts
 
-The game is still actively being developed, and this is only the beginning. I'm already planning even more features and minigames for future updates.
+Completing all daily quests rewards players with coins and gives them a reason to return every day.
 
-🎮 You can play the current version here:
-https://sirbualex2011-wq.github.io/capibara-game/
+🏆 Achievement & Trophy System
 
-I'd love to hear your feedback and ideas before the update goes live. Thanks for checking it out! ❤️r your thoughts! If you have ideas for new features or if you find any bugs, feel free to open an Issue or reach out.
+The new trophy system introduces long-term goals.
+
+Players can unlock achievements such as:
+
+🍔 Gurmand — interact with Capybara many times
+👕 Fashion Icon — customize Capybara with clothes
+🍀 Lucky Day — win multiple lottery rewards
+
+Achievements now give players extra motivation to continue playing and exploring the game.
+
+🕶️ New Customization Items
+
+Customization received a new upgrade.
+
+Players can now equip:
+
+🎩 Hats
+👕 Shirts
+🕶️ Sunglasses
+
+The goal is to make every Capybara feel unique and allow players to create their own style.
+
+🐛 Debugging & Improvements
+
+This update also included a lot of testing and bug fixing.
+
+I worked on:
+
+improving local storage saving;
+fixing progress persistence;
+improving quest reset logic;
+fixing clothing and reward systems;
+making the game more stable.
+
+Small improvements like these are important because a better player experience comes not only from new features, but also from reliability.
+
+🚀 What’s Next?
+
+My goal is to continue expanding My Capybara with more interactions, more customization options, more challenges, and a deeper virtual pet experience.
+
+This is only the beginning of the journey.
+
+Thank you for following the development of My Capybara! 🐹💛
+
+#gamedev #javascript #html #webgame #indiedev #virtualpet #coding
