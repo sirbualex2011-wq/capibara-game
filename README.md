@@ -1,79 +1,69 @@
-🐹 My Capybara Game — Update #2: A More Alive World 🌿✨
+🐹 My Capybara — Major #4 Update Coming Soon! 🌱✨
 
-I’m excited to share the second major update of My Capybara, my virtual pet game where you take care of your own cute capybara, feed it, customize it, complete challenges, and build a small relationship with your virtual friend.
+🌟 What's New in This Update?
+🌱 NEW: Capy's Garden System
 
-This update focused on making the game feel more alive, rewarding, and enjoyable for players.
+A completely new feature has been added to the game!
 
-🌿 A New Atmosphere & Visual Improvements
+Players can now unlock their own garden and start growing different plants. Choose what to plant, wait for your crops to grow, and collect rewards when they are ready.
 
-The biggest change in this update is the new visual experience.
+🌿 Garden features:
+Buy your own garden using coins.
+Plant different types of plants:
+🥕 Carrot
+🌻 Flower
+🍓 Strawberry
+🍉 Watermelon
+Every plant has its own growing time.
+Return later to collect your rewards.
+Receive coins, happiness, and friendship bonuses from gardening.
 
-I redesigned the background to create a warmer and more relaxing environment that fits the personality of a capybara:
+The Garden System creates a new progression path and gives players another reason to return, interact with Capy, and continue improving their virtual pet.
+🏡 New Welcome Experience
+The beginning of the game has been redesigned!
 
-✨ Animated natural-style background
-☀️ Soft lighting effects
-🍃 Floating leaves
-💫 Magical particles and small visual details
-🖱️ Custom cursor for a more game-like feeling
+Added a new entrance screen for new players.
+Improved the first impression of the game.
+Added clearer information about Capy's features.
+Created a smoother and more enjoyable start to the adventure.
+🏆 More Achievements
 
-The goal was simple: when players open the game, they should feel like they are entering a small, cozy world instead of just opening a webpage.
+New achievements have been added!
 
-📋 Daily Quests
+Players now have more goals to complete and more rewards to unlock.
 
-A completely new progression system has been added.
+Achievements can be earned by:
 
-Players can now complete daily objectives:
+Taking care of Capy.
+Building friendship.
+Collecting coins.
+Reaching important milestones.
+Exploring different game features.
+🎨 New Visual Style
 
-🥕 Feed Capybara
-🎰 Try the lottery
-🎁 Open treasure hunts
+The game interface received a fresh new look!
 
-Completing all daily quests rewards players with coins and gives them a reason to return every day.
+Changes include:
 
-🏆 Achievement & Trophy System
+Redesigned buttons.
+Improved UI appearance.
+Better looking panels and menus.
+A more polished gameplay experience.
+🐞 Bug Fixes & Improvements
 
-The new trophy system introduces long-term goals.
+This update also includes many fixes and improvements:
 
-Players can unlock achievements such as:
+Fixed gameplay issues.
+Improved feature stability.
+Improved saved progress handling.
+More small bug fixes before the official release.
+❤️ Thank You for Supporting My Capybara!
 
-🍔 Gurmand — interact with Capybara many times
-👕 Fashion Icon — customize Capybara with clothes
-🍀 Lucky Day — win multiple lottery rewards
+This update is another important step in expanding Capy's world. The goal is to make the game more fun, interactive, and rewarding for every player.
 
-Achievements now give players extra motivation to continue playing and exploring the game.
+More features are coming in future updates. Take care of Capy, unlock achievements, grow your garden, and become the best owner! 🐹❤️
 
-🕶️ New Customization Items
+🚀 Update releasing soon!
 
-Customization received a new upgrade.
-
-Players can now equip:
-
-🎩 Hats
-👕 Shirts
-🕶️ Sunglasses
-
-The goal is to make every Capybara feel unique and allow players to create their own style.
-
-🐛 Debugging & Improvements
-
-This update also included a lot of testing and bug fixing.
-
-I worked on:
-
-improving local storage saving;
-fixing progress persistence;
-improving quest reset logic;
-fixing clothing and reward systems;
-making the game more stable.
-
-Small improvements like these are important because a better player experience comes not only from new features, but also from reliability.
-
-🚀 What’s Next?
-
-My goal is to continue expanding My Capybara with more interactions, more customization options, more challenges, and a deeper virtual pet experience.
-
-This is only the beginning of the journey.
-
-Thank you for following the development of My Capybara! 🐹💛
-
-#gamedev #javascript #html #webgame #indiedev #virtualpet #coding
+🌐 Official Website:
+https://sirbualex2011-wq.github.io/capibara-game/
