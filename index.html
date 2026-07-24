@@ -1,43 +1,227 @@
-<!DOCTYPE html>
-<html> 
-<head>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PL76YC9GSK"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+    <!DOCTYPE html>
 
-gtag('config', 'G-PL76YC9GSK');
-</script>
-<style>
+    <html> 
 
-body {
-     cursor: url("images/capy-cursor.png"), auto;
+    <head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PL76YC9GSK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PL76YC9GSK');
+    </script>
+    <style>
+    #second-page{
+    display:none;
+    min-height:100vh;
+    animation:fadeGame 0.8s ease;
+    }
+
+    @keyframes fadeGame{
+    from{
+    opacity:0;
+    transform:scale(1.03);
+    }
+    to{
+    opacity:1;
+    transform:scale(1);
+    }
+    }
+    #start-screen{
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(255,255,255,.8),
+    transparent 35%),
+
+    linear-gradient(
+    180deg,
+    #7fd7ff 0%,
+    #bff8ff 35%,
+    #d7ffcb 70%,
+    #fff0b8 100%
+    );
+
+    }
+    .first-title{
+
+    font-size:75px;
+
+    font-weight:900;
+
+    color:white;
+
+    text-shadow:
+    0 0 15px #ffffff,
+    0 0 35px #ffd54f,
+    5px 5px 0px #f59e0b;
+
+    animation:titleMove 2s infinite ease-in-out;
+
+    margin-bottom:15px;
+
+    }
+    @keyframes titleMove{
+
+    0%,100%{
+    transform:translateY(0px);
+    }
+
+    50%{
+    transform:translateY(-10px);
+    }
+
+    }
+    .first-paragraf{
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#6b3e00;
+
+    margin-bottom:15px;
+
+    }
+    .start-paragraf{
+
+    font-size:22px;
+
+    max-width:850px;
+
+    line-height:1.6;
+
+    font-weight:bold;
+
+    color:#444;
+
+    margin-bottom:35px;
+
+    }
+    .start-text{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    line-height:2;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:30px;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+
+    margin-bottom:45px;
+  
+    }
+    .start-button{
+
+    font-size:30px;
+
+    font-weight:900;
+
+    padding:22px 65px;
+
+    border:none;
+
+    border-radius:100px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff9d00,
+    #ffcb05);
+
+    box-shadow:
+
+    0 0 30px rgba(255,180,0,.6),
+    0 12px 35px rgba(0,0,0,.2);
+
+    transition:.25s;
+
+    animation:pulse 1.6s infinite;
+
+    }
+    .start-button:hover{
+
+    transform:
+    scale(1.08);
+
+    }
+    @keyframes pulse{
+
+    0%,100%{
+
+    transform:scale(1);
+
+    box-shadow:
+    0 0 25px rgba(255,180,0,.5);
+
+    }
+
+    50%{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 55px rgba(255,180,0,.9);
+
+    }
+
+    }
+
+    body {
+    cursor: url("images/capy-cursor.png"), auto;
     margin: 0;
     min-height: 100vh;
     font-family: Arial, sans-serif;
 
     background:
-        radial-gradient(circle at 50% 0%, 
-        rgba(255,255,255,0.9), transparent 35%),
+    radial-gradient(circle at 50% 0%, 
+    rgba(255,255,255,0.9), transparent 35%),
 
-        radial-gradient(circle at 10% 90%, 
-        rgba(255,190,120,0.5), transparent 30%),
+    radial-gradient(circle at 10% 90%, 
+    rgba(255,190,120,0.5), transparent 30%),
 
-        linear-gradient(
-        180deg,
-        #87ceeb 0%,
-        #b8f2e6 35%,
-        #fff1b6 70%,
-        #ffd6a5 100%
-        );
+    linear-gradient(
+    180deg,
+    #87ceeb 0%,
+    #b8f2e6 35%,
+    #fff1b6 70%,
+    #ffd6a5 100%
+    );
 
     overflow-x:hidden;
-}
+    }
 
-.sun {
+    .sun {
     position: fixed;
     width: 350px;
     height: 350px;
@@ -52,10 +236,10 @@ body {
     opacity:0.7;
 
     z-index:-1;
-}
+    }
 
 
-.leaf {
+    .leaf {
     position:fixed;
 
     font-size:90px;
@@ -65,43 +249,43 @@ body {
     animation:floatLeaf 8s infinite ease-in-out;
 
     z-index:-1;
-}
+    }
 
 
-.leaf1 {
+    .leaf1 {
     left:5%;
     bottom:10%;
-}
+    }
 
 
-.leaf2 {
+    .leaf2 {
     right:10%;
     top:30%;
 
     animation-delay:2s;
-}
+    }
 
 
-.leaf3 {
+    .leaf3 {
     left:40%;
     top:15%;
 
     animation-delay:4s;
-}
+    }
 
 
-@keyframes floatLeaf {
+    @keyframes floatLeaf {
 
     0%,100% {
-        transform:translateY(0px) rotate(0deg);
+    transform:translateY(0px) rotate(0deg);
     }
 
     50% {
-        transform:translateY(-25px) rotate(10deg);
+    transform:translateY(-25px) rotate(10deg);
     }
 
-}
-.spark {
+    }
+    .spark {
     position: fixed;
 
     width: 12px;
@@ -120,1137 +304,2596 @@ body {
     animation: sparkle 6s infinite ease-in-out;
 
     z-index: -1;
-}
+    }
 
 
-.spark1 {
+    .spark1 {
     left:15%;
     top:40%;
-}
+    }
 
-.spark2 {
+    .spark2 {
     left:80%;
     top:25%;
     animation-delay:2s;
-}
+    }
 
-.spark3 {
+    .spark3 {
     left:60%;
     top:70%;
     animation-delay:4s;
-}
+    }
 
-.spark4 {
+    .spark4 {
     left:30%;
     top:80%;
     animation-delay:1s;
-}
+    }
 
-.spark5 {
+    .spark5 {
     left:90%;
     top:60%;
     animation-delay:3s;
-}
+    }
 
 
-@keyframes sparkle {
+    @keyframes sparkle {
 
     0%,100% {
-        transform:translateY(0px);
-        opacity:0.2;
+    transform:translateY(0px);
+    opacity:0.2;
     }
 
     50% {
-        transform:translateY(-40px);
+    transform:translateY(-40px);
+    opacity:1;
+    }
+
+    }
+
+    .morcov,
+.mar,
+.banana,
+.apa,
+.capsuna{
+
+    height:130px;
+
+    cursor:pointer;
+
+    padding:10px;
+
+    border-radius:30px;
+
+    background:radial-gradient(
+        circle,
+        #ffffff,
+        #ffeaa7
+    );
+
+    border:4px solid #ffffff;
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.18);
+
+    transition:.3s;
+
+    animation:foodFloat 3s infinite ease-in-out;
+
+}
+
+.morcov:hover,
+.mar:hover,
+.banana:hover,
+.apa:hover,
+.capsuna:hover{
+
+    transform:
+        scale(1.12)
+        rotate(-4deg);
+
+    box-shadow:
+        0 20px 40px rgba(255,190,0,.5);
+
+}
+
+.morcov:active,
+.mar:active,
+.banana:active,
+.apa:active,
+.capsuna:active{
+
+    transform:scale(.9);
+
+}
+
+@keyframes foodFloat{
+
+    0%,100%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-5px);
+
+    }
+
+}
+    .text{
+    font-size: 30px;
+    color: rgb(244, 172, 3);
+    }
+
+    .resultat-text{ 
+    font-size: 25px;
+    }
+
+    .capibara-text{
+    font-size: 17px;
+    }
+
+
+    .capi{
+    font-size: 22px;
+    color: rgb(237, 202, 27);
+    }
+
+    .capibara-text{
+    font-size: 20px;
+    }
+    .js-fericire {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff9233 0%, #ffdb33 100%);
+    padding: 12px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 146, 51, 0.4);
+    }
+
+    .js-input {
+    padding: 17px;
+    border: 2px dashed #ff9233;
+    border-radius: 10px;
+    background-color: #fff9e6;
+    color: #555;
+    font-weight: bold;
+    }
+
+    .js-input::placeholder {
+    color: #ffb77a;
+    }
+    .container-input {
+    display: flex;         
+    justify-content: center; 
+    align-items: center;   
+    gap: 10px;              
+    margin-top: 25px;       
+    margin-left: 53px;      
+    }
+    .buton-feed {
+    padding: 17px 27px; 
+    background-color: #f08221; 
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+    }
+
+
+    .buton-feed:hover {
+    background-color: #ff7f00;
+    transform: scale(1.05); 
+    }
+
+
+    .buton-feed:active {
+    transform: scale(0.95); 
+    }
+    .js-nivel {
+
+    display:inline-block;
+
+    padding:10px 25px;
+
+    margin:20px;
+
+
+    font-size:20px;
+
+    font-weight:900;
+
+
+    color:white;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #f6d20a,
+        #ed470a
+    );
+
+
+    border-radius:30px;
+
+
+    border:3px solid white;
+
+
+    text-transform:uppercase;
+
+
+    letter-spacing:1px;
+
+
+    text-shadow:
+
+    0 2px 4px rgba(0,0,0,.35);
+
+
+    box-shadow:
+
+    0 8px 20px rgba(103,58,183,.5),
+    inset 0 3px 8px rgba(255,255,255,.5);
+
+
+    transition:.3s;
+
+
+}
+
+
+.js-nivel:hover{
+
+    transform:
+    scale(1.08)
+    translateY(-3px);
+
+
+    box-shadow:
+
+    0 15px 35px rgba(33,150,243,.7),
+    inset 0 3px 10px rgba(255,255,255,.6);
+
+}
+    .js-monede {
+    position: fixed;
+    top: 25px;
+    right: 50px;
+    z-index: 9999;
+
+
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 3px solid #f7d547;
+    border-radius: 50px;
+    padding: 6px 20px 6px 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+
+    animation: gold-glow 2s infinite ease-in-out;
+    }
+
+
+    .js-monede::before {
+    content: "💰";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #fdf2b2;
+    border: 2px solid #f7d547;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 20px;
+    }
+
+
+    .js-monede {
+    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: #333;
+    letter-spacing: 0.5px;
+    }
+
+
+    @keyframes gold-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(247, 213, 71, 0.4); border-color: #f7d547; }
+    50% { box-shadow: 0 0 20px rgba(247, 213, 71, 0.7); border-color: #ffd700; }
+    }
+
+    .buton-shop {
+
+    position: fixed;
+    top: 140px; 
+    right: 50px;
+    z-index: 999;
+
+    padding: 10px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff9d00,
+        #ff5e00
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 2px 4px rgba(0,0,0,.3);
+
+    box-shadow:
+
+    0 8px 20px rgba(255,120,0,.45),
+    inset 0 3px 8px rgba(255,255,255,.35);
+
+    transition:.3s;
+
+    overflow:hidden;
+
+}
+
+
+
+.buton-shop::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:70%;
+    height:100%;
+
+    background:
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.7),
+    transparent
+    );
+
+    transition:.5s;
+
+}
+
+
+.buton-shop:hover::before{
+
+    left:130%;
+
+}
+
+
+.buton-shop:hover{
+
+    transform:
+    scale(1.08)
+    translateY(-3px);
+
+    box-shadow:
+
+    0 15px 30px rgba(255,120,0,.6),
+    inset 0 3px 10px rgba(255,255,255,.4);
+
+}
+
+
+.buton-shop:active{
+
+    transform:scale(.95);
+
+}
+    .shop-panel {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    }
+
+    .shop-content {
+    background: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 4px solid #ff9233;
+    }
+
+    .button-s{
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    background: linear-gradient(135deg, #ff871e 0%, #f7d021 100%);
+    padding: 11px 20px;
+    border-radius: 30px;  
+    }
+
+    .exit-button{
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    background: linear-gradient(135deg, #ff8215 0%, #f51212 100%);
+    padding: 11px 20px;
+    border-radius: 30px;  
+    }
+    .buton-shopClothes {
+
+    position: fixed;
+    top: 200px; 
+    right: 50px;
+    z-index: 999;
+
+    padding: 10px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #6dd5fa,
+        #9b59b6
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 2px 4px rgba(0,0,0,.3);
+
+    box-shadow:
+
+    0 8px 20px rgba(155,89,182,.45),
+    inset 0 3px 8px rgba(255,255,255,.45);
+
+    transition:.3s;
+
+    overflow:hidden;
+
+}
+
+
+
+.buton-shopClothes::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:70%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transition:.5s;
+
+}
+
+
+.buton-shopClothes:hover::before{
+
+    left:130%;
+
+}
+
+
+.buton-shopClothes:hover{
+
+    transform:
+    scale(1.08)
+    translateY(-3px);
+
+    box-shadow:
+
+    0 15px 30px rgba(155,89,182,.6),
+    inset 0 3px 10px rgba(255,255,255,.5);
+
+}
+
+
+.buton-shopClothes:active{
+
+    transform:scale(.95);
+
+}
+    .shop-panel-haine {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+
+    }
+    .shop-content-haine{
+    background: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 4px solid #ff9233;
+    }
+    .sad-mode #capy-image {
+    width: 1200px !important;
+    height: auto !important;
+    display: block !important;
+    }
+    .happy-mode #capy-image {
+    width: 1200px !important;
+    height: auto !important;
+    display: block !important;
+    }
+    #hat-layer {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+
+
+    width: 150px;      
+    top: 130px;        
+    left: 430px;   
+    display: none;
+    }
+
+    #shirt-layer {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+
+
+    width: 490px; 
+    height: 260px;    
+    top: 370px;      
+    left: 270px; 
+    border-radius: 0px 0px 900px 900px;  
+    opacity: 0.98;
+    display: none;   
+    }
+    #glasses-layer{
+    position:absolute;
+    z-index:4;
+    pointer-events:none;
+
+    width:170px;
+    top:210px;
+    left:427px;
+
+    display:none;
+    }
+    .happy-mode #glasses-layer{
+    top:310px;
+    left:490px;
+    width:150px;
+    }
+
+    .sad-mode #glasses-layer{
+    top:380px;
+    left:440px;
+    width:150px;
+    }
+    .happy-mode #capy-sad-image {
+    width: 600px; 
+    }
+    .happy-mode #hat-layer {
+    top: 240px;    
+    left: 480px;
+    }
+
+    .happy-mode #shirt-layer {
+    display: block; 
+    top: 490px;    
+    left: 370px;
+    width: 370px;
+    height: 230px;
+    }
+    .sad-mode #hat-layer {
+    top: 270px;
+    left: 390px;
+    }
+
+    .sad-mode #shirt-layer {
+    top: 560px;
+    left: 230px;
+    width:410px;
+    height: 230px;
+    }
+    .buton-palarie{
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    background: linear-gradient(135deg, #ff871e 0%, #f7d021 100%);
+    padding: 11px 20px;
+    border-radius: 30px;
+    }
+    .remove-buton{
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    background: linear-gradient(135deg, #fcd707 0%, #f97713 100%);
+    padding: 11px 20px;
+    border-radius: 30px;
+    }
+
+    .trofee-panel {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    }
+
+    .trofee-content {
+    background: white;
+    width: 340px;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    border: 4px solid #4ade80;
+    }
+
+    .trofeu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0fdf4;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #bbf7d0;
+    font-size: 14px;
+    font-weight: bold;
+    }
+
+    .trofeu-blocat {
+    opacity: 0.5;
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+    }
+    .buton-panel{
+
+    position: fixed;
+    top: 260px; 
+    right: 50px;
+    z-index: 999;
+
+    padding:10px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffd700,
+        #ff9800
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 2px 4px rgba(0,0,0,.35);
+
+    box-shadow:
+
+    0 8px 20px rgba(255,193,7,.5),
+    inset 0 3px 8px rgba(255,255,255,.5);
+
+    transition:.3s;
+
+    overflow:hidden;
+
+}
+
+
+
+.buton-panel::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:70%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transition:.5s;
+
+}
+
+
+.buton-panel:hover::before{
+
+    left:130%;
+
+}
+
+
+.buton-panel:hover{
+
+    transform:
+    scale(1.08)
+    translateY(-3px);
+
+    box-shadow:
+
+    0 15px 35px rgba(255,193,7,.7),
+    inset 0 3px 10px rgba(255,255,255,.6);
+
+}
+
+
+.buton-panel:active{
+
+    transform:scale(.95);
+
+}
+  .buton-quests{
+
+    position: fixed;
+    top: 320px; 
+    right: 50px;
+    z-index: 999;
+
+    padding:10px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #00c853,
+        #00b8d4
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 2px 4px rgba(0,0,0,.35);
+
+
+    box-shadow:
+
+    0 8px 20px rgba(0,200,83,.45),
+    inset 0 3px 8px rgba(255,255,255,.45);
+
+    transition:.3s;
+
+    overflow:hidden;
+
+}
+
+
+
+.buton-quests::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:70%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transition:.5s;
+
+}
+
+
+.buton-quests:hover::before{
+
+    left:130%;
+
+}
+
+
+.buton-quests:hover{
+
+    transform:
+    scale(1.08)
+    translateY(-3px);
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,200,83,.65),
+    inset 0 3px 10px rgba(255,255,255,.5);
+
+}
+
+
+.buton-quests:active{
+
+    transform:scale(.95);
+
+}
+    .quests-panel{
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;  
+    }
+    .quests-content{
+    background: white;
+    width: 340px;
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    border: 4px solid #4ade80;
+    }
+    .feedParagraf,
+    .loteryParagraf,
+    .huntParagraf {
+    background: linear-gradient(135deg, #fff7cc, #ffe082);
+    border: 3px solid #ffb300;
+    border-radius: 15px;
+    padding: 12px 20px;
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #7a4b00;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    }
+
+    .feedParagraf:hover,
+    .loteryParagraf:hover,
+    .huntParagraf:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+
+
+    .quest-completed {
+    background: linear-gradient(135deg, #bbf7d0, #4ade80);
+    border-color: #16a34a;
+    color: #065f46;
+    }
+    .daily-reward-popup{
+    display:none;
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(4px);
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:1000;
+}
+
+
+.daily-reward-content{
+
+    background:linear-gradient(
+        135deg,
+        #fff4c2,
+        #ffd6a5
+    );
+
+    width:300px;
+    padding:25px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 0 25px #ffd166;
+
+    animation:popup 0.4s ease;
+}
+
+
+.daily-reward-content h2{
+    font-size:28px;
+    margin:5px;
+}
+
+
+.reward-text{
+    font-size:20px;
+}
+
+
+.reward-button{
+
+    background:#55c57a;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:20px;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+.reward-button:hover{
+    transform:scale(1.05);
+}
+
+
+@keyframes popup{
+
+    from{
+        transform:scale(0.5);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
         opacity:1;
     }
 
 }
 
-.morcov{
-height: 130px;
-border: none;
-background-color: transparent;
-cursor: pointer;
+.prietenie-paragraf{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    font-size:26px;
+
+    font-weight:900;
+
+    color:#4b3200;
+
+    background:linear-gradient(
+        135deg,
+        #ffb300,
+        #ffd54f,
+        #fff176
+    );
+
+    border-radius:50px;
+
+    border:3px solid white;
+
+    text-shadow:
+    0 1px 2px rgba(255,255,255,.5);
+
+    box-shadow:
+    0 0 18px rgba(255,193,7,.55);
+
+    animation:friendGlow 2.5s infinite ease-in-out;
+
 }
 
-.mar{
-height: 130px;
-border: none;
-background-color: transparent;
-cursor: pointer;
-}
+@keyframes friendGlow{
 
-.banana{
-height: 130px;
-border: none;
-background-color: transparent;
-cursor: pointer;
-}
+    0%,100%{
 
-.apa{
-height: 130px;
-border: none;
-background-color: transparent;
-cursor: pointer;
-}
-.capsuna{
-height: 130px;
-border: none;
-background-color: transparent;
-cursor: pointer;
-}
+        box-shadow:
+        0 0 15px rgba(255,193,7,.45);
 
-.text{
-font-size: 30px;
-color: rgb(244, 172, 3);
-}
+    }
 
-.resultat-text{ 
-font-size: 25px;
-}
+    50%{
 
-.capibara-text{
-font-size: 17px;
+        box-shadow:
+        0 0 35px rgba(255,193,7,.95),
+        0 0 70px rgba(255,235,59,.6);
+
+    }
+
 }
+.garden-button{
+
+    position: fixed;
+    top: 380px;
+    right: 50px;
+    z-index:999;
+
+    padding:10px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #43a047,
+        #cddc39
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    text-shadow:
+    0 2px 4px rgba(0,0,0,.35);
 
 
-.capi{
-font-size: 22px;
-color: rgb(237, 202, 27);
-}
+    box-shadow:
 
-.capibara-text{
-font-size: 20px;
-}
-.js-fericire {
-font-size: 24px;
-font-weight: 800;
-color: #ffffff;
-background: linear-gradient(135deg, #ff9233 0%, #ffdb33 100%);
-padding: 12px 30px;
-border-radius: 50px;
-display: inline-block;
-text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-box-shadow: 0 4px 15px rgba(255, 146, 51, 0.4);
-}
+    0 8px 20px rgba(67,160,71,.5),
+    inset 0 3px 8px rgba(255,255,255,.5);
 
-.js-input {
-padding: 17px;
-border: 2px dashed #ff9233;
-border-radius: 10px;
-background-color: #fff9e6;
-color: #555;
-font-weight: bold;
-}
+    transition:.3s;
 
-.js-input::placeholder {
-color: #ffb77a;
-}
-.container-input {
-display: flex;         
-justify-content: center; 
-align-items: center;   
-gap: 10px;              
-margin-top: 25px;       
-margin-left: 53px;      
-}
-.buton-feed {
-padding: 17px 27px; 
-background-color: #f08221; 
-color: white;
-font-weight: bold;
-border: none;
-border-radius: 25px;
-cursor: pointer;
-transition: transform 0.2s, background-color 0.3s;
+    overflow:hidden;
+
 }
 
 
-.buton-feed:hover {
-background-color: #ff7f00;
-transform: scale(1.05); 
+/* efect de lumină */
+.garden-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:70%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.8),
+        transparent
+    );
+
+    transition:.5s;
+
+}
+
+
+.garden-button:hover::before{
+
+    left:130%;
+
 }
 
 
-.buton-feed:active {
-transform: scale(0.95); 
-}
-.js-nivel {
-display: inline-block;
-padding: 10px 25px;
-margin: 20px;
+.garden-button:hover{
 
-background: linear-gradient(135deg, #fff9c4, #fff176);
-border: 3px solid #ffca28;
-border-radius: 30px;
+    transform:
+    scale(1.08)
+    translateY(-3px);
 
 
-font-size: 20px;
-font-weight: bold;
-color: #f57f17;
-text-transform: uppercase;
+    box-shadow:
 
-
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-transition: transform 0.3s ease;
-}
-.js-nivel:hover {
-transform: scale(1.05); 
-}
-.js-monede {
-position: fixed;
-top: 25px;
-right: 50px;
-z-index: 9999;
-
-
-display: flex;
-align-items: center;
-background: #ffffff;
-border: 3px solid #f7d547;
-border-radius: 50px;
-padding: 6px 20px 6px 6px;
-box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-
-
-animation: gold-glow 2s infinite ease-in-out;
-}
-
-
-.js-monede::before {
-content: "💰";
-display: flex;
-align-items: center;
-justify-content: center;
-width: 40px;
-height: 40px;
-background: #fdf2b2;
-border: 2px solid #f7d547;
-border-radius: 50%;
-margin-right: 12px;
-font-size: 20px;
-}
-
-
-.js-monede {
-font-family: 'Arial', sans-serif;
-font-size: 22px;
-font-weight: 900;
-color: #333;
-letter-spacing: 0.5px;
-}
-
-
-@keyframes gold-glow {
-0%, 100% { box-shadow: 0 0 10px rgba(247, 213, 71, 0.4); border-color: #f7d547; }
-50% { box-shadow: 0 0 20px rgba(247, 213, 71, 0.7); border-color: #ffd700; }
-}
-
-.buton-shop {
-position: fixed;
-top: 140px; 
-right: 50px;
-z-index: 999;
-padding: 10px 20px;
-background: #ff9233;
-color: white;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-}
-
-
-.shop-panel {
-display: none; 
-position: fixed;
-top: 0; left: 0; width: 100%; height: 100%;
-background: rgba(0,0,0,0.5);
-z-index: 9999;
-}
-
-.shop-content {
-background: white;
-width: 300px;
-margin: 100px auto;
-padding: 20px;
-border-radius: 15px;
-text-align: center;
-border: 4px solid #ff9233;
-}
-
-.button-s{
-font-size: 15px;
-font-weight: 700;
-color: #000000;
-background: linear-gradient(135deg, #ff871e 0%, #f7d021 100%);
-padding: 11px 20px;
-border-radius: 30px;  
-}
-
-.exit-button{
-font-size: 15px;
-font-weight: 700;
-color: #000000;
-background: linear-gradient(135deg, #ff8215 0%, #f51212 100%);
-padding: 11px 20px;
-border-radius: 30px;  
-}
-.shop-panel-haine {
-display: none; 
-position: fixed;
-top: 0; left: 0; width: 100%; height: 100%;
-background: rgba(0,0,0,0.5);
-z-index: 9999;
+    0 15px 35px rgba(76,175,80,.7),
+    inset 0 3px 10px rgba(255,255,255,.6);
 
 }
-.shop-content-haine{
-    background: white;
-width: 300px;
-margin: 100px auto;
-padding: 20px;
-border-radius: 15px;
-text-align: center;
-border: 4px solid #ff9233;
+
+
+.garden-button:active{
+
+    transform:scale(.95);
+
 }
-.sad-mode #capy-image {
-width: 1200px !important;
-height: auto !important;
-display: block !important;
-}
-.happy-mode #capy-image {
-width: 1200px !important;
-height: auto !important;
-display: block !important;
-}
-#hat-layer {
-position: absolute;
-z-index: 3;
-pointer-events: none;
-
-
-width: 150px;      
-top: 130px;        
-left: 430px;   
-display: none;
-}
-
-#shirt-layer {
-position: absolute;
-z-index: 2;
-pointer-events: none;
-
-
-width: 490px; 
-height: 260px;    
-top: 370px;      
-left: 270px; 
-border-radius: 0px 0px 900px 900px;  
-opacity: 0.98;
-display: none;   
-}
-#glasses-layer{
-position:absolute;
-z-index:4;
-pointer-events:none;
-
-width:170px;
-top:210px;
-left:427px;
+.garden-panel{
 
 display:none;
-}
-.happy-mode #glasses-layer{
-top:310px;
-left:490px;
-width:150px;
-}
 
-.sad-mode #glasses-layer{
-top:380px;
-left:440px;
-width:150px;
-}
-.happy-mode #capy-sad-image {
-width: 600px; 
-}
-.happy-mode #hat-layer {
-top: 240px;    
-left: 480px;
-}
+position:fixed;
 
-.happy-mode #shirt-layer {
-display: block; 
-top: 490px;    
-left: 370px;
-width: 370px;
-height: 230px;
-}
-.sad-mode #hat-layer {
-top: 270px;
-left: 390px;
-}
+inset:0;
 
-.sad-mode #shirt-layer {
-top: 560px;
-left: 230px;
-    width:410px;
-    height: 230px;
-}
-.buton-palarie{
-font-size: 15px;
-font-weight: 700;
-color: #000000;
-background: linear-gradient(135deg, #ff871e 0%, #f7d021 100%);
-padding: 11px 20px;
-border-radius: 30px;
-}
-.remove-buton{
-font-size: 15px;
-font-weight: 700;
-color: #000000;
-background: linear-gradient(135deg, #fcd707 0%, #f97713 100%);
-padding: 11px 20px;
-border-radius: 30px;
-}
-.trofee-panel {
-display: none;
-position: fixed;
-top: 0; left: 0; width: 100%; height: 100%;
-background: rgba(0,0,0,0.5);
-z-index: 9999;
-}
+background:
+rgba(0,0,0,.5);
 
-.trofee-content {
-background: white;
-width: 340px;
-margin: 80px auto;
-padding: 20px;
-border-radius: 15px;
-text-align: left;
-border: 4px solid #4ade80;
-}
+z-index:9999;
 
-.trofeu-item {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background: #f0fdf4;
-padding: 10px 15px;
-margin: 8px 0;
-border-radius: 10px;
-border: 1px solid #bbf7d0;
-font-size: 14px;
-font-weight: bold;
-}
 
-.trofeu-blocat {
-opacity: 0.5;
-background: #f1f5f9;
-border-color: #cbd5e1;
-}
-.buton-panel{
-position: fixed;
-top: 260px; 
-right: 50px;
-z-index: 999;
-padding: 10px 20px;
-background: #ff9233;
-color: white;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-}
-.buton-quests{
-position: fixed;
-top: 320px; 
-right: 50px;
-z-index: 999;
-padding: 10px 20px;
-background: #ff9233;
-color: white;
-border: none;
-border-radius: 20px;
-cursor: pointer;
-}
-.quests-panel{
-display: none;
-position: fixed;
-top: 0; left: 0; width: 100%; height: 100%;
-background: rgba(0,0,0,0.5);
-z-index: 9999;  
-}
-.quests-content{
-    background: white;
-width: 340px;
-margin: 80px auto;
-padding: 20px;
-border-radius: 15px;
-text-align: left;
-border: 4px solid #4ade80;
-}
-.feedParagraf,
-.loteryParagraf,
-.huntParagraf {
-background: linear-gradient(135deg, #fff7cc, #ffe082);
-border: 3px solid #ffb300;
-border-radius: 15px;
-padding: 12px 20px;
-margin: 12px 0;
-font-size: 18px;
-font-weight: bold;
-color: #7a4b00;
-box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-transition: transform 0.2s, box-shadow 0.2s;
-text-align: center;
-}
-
-.feedParagraf:hover,
-.loteryParagraf:hover,
-.huntParagraf:hover {
-transform: scale(1.05);
-box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 
 
-.quest-completed {
-background: linear-gradient(135deg, #bbf7d0, #4ade80);
-border-color: #16a34a;
-color: #065f46;
+.garden-content{
+
+background:
+linear-gradient(
+135deg,
+#d9ffb8,
+#fff3b0
+);
+
+
+width:350px;
+
+margin:100px auto;
+
+padding:25px;
+
+border-radius:30px;
+
+text-align:center;
+
+
+border:5px solid #55c57a;
+
+
+box-shadow:
+0 0 40px #55c57a;
+
+
+animation:gardenPop .4s ease;
+
 }
-</style> 
-<title>My Capybara😍</title>
 
 
-<meta name="description" content="A cute virtual pet game where you take care of a capybara. Feed it, play with it, and enjoy relaxing moments!">
+@keyframes gardenPop{
+
+from{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+
+.plant-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.plant-buttons button{
+
+
+font-size:45px;
+
+width:80px;
+
+height:80px;
+
+
+border:none;
+
+border-radius:25px;
+
+
+cursor:pointer;
+
+
+background:white;
+
+
+box-shadow:
+0 10px 20px rgba(0,0,0,.2);
+
+
+transition:.3s;
+
+}
+
+
+
+.plant-buttons button:hover{
+
+transform:
+scale(1.2)
+translateY(-10px);
+
+box-shadow:
+0 0 25px #55c57a;
+
+}
+
+
+
+.collect-button{
+
+margin-top:20px;
+
+font-size:22px;
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+background:#55c57a;
+
+color:white;
+
+font-weight:bold;
+
+}
+    </style> 
+   <title>My Capybara 🐹 - Virtual Pet Game with Garden, Quests & Achievements</title>
+
+<link rel="icon" type="image/png" href="images/capy-first-img.png">
+
+
+<meta name="description" content="Raise your own virtual capybara! Feed Capy, grow a garden, unlock cute outfits, complete daily quests, collect achievements and build a friendship. 🐹❤️">
+
+
+<meta name="keywords" content="My Capybara, capybara game, virtual pet game, browser game, cute pet game, online pet game, indie game, virtual animal game">
+
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
 <meta name="google-site-verification" content="L9KDqRZSNQi2CJXd3o2ETec8p4bSKBrCNoXvuJrEu2o" />
-</head>
-<body>
-    <div class="spark spark1"></div>
-<div class="spark spark2"></div>
-<div class="spark spark3"></div>
-<div class="spark spark4"></div>
-<div class="spark spark5"></div>
 
-<div class="sun"></div>
 
-<div class="leaf leaf1">🌿</div>
-<div class="leaf leaf2">🍃</div>
-<div class="leaf leaf3">🌱</div>
 
-<button class="buton-shop" onclick="magazinul()">🛒 Shop</button>
 
-<div id="shopPanel" class="shop-panel">
-<div class="shop-content">
-    <h2>Capy Shop</h2>
-    <div class="shop-items">
-    <button onclick="mancareaPreferata()" class="button-s">Super Food</button>
-    <button onclick=" deschideCutia ()"class="button-s">Treasure hunt</button>
-    <button onclick="lotereie()"class="button-s">Lottery</button>
+<meta property="og:title" content="My Capybara 🐹 - Virtual Pet Game">
+
+<meta property="og:description" content="Take care of Capy, grow a garden, unlock outfits, complete quests and collect achievements!">
+
+<meta property="og:image" content="https://sirbualex2011-wq.github.io/capibara-game/images/capy-first-img.png">
+
+<meta property="og:url" content="https://sirbualex2011-wq.github.io/capibara-game/">
+
+<meta property="og:type" content="website">
+
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="My Capybara 🐹 - Virtual Pet Game">
+
+<meta name="twitter:description" content="Raise your own Capybara, unlock rewards, grow your garden and become best friends!">
+
+<meta name="twitter:image" content="https://sirbualex2011-wq.github.io/capibara-game/images/capy-first-img.png">
+
+    </head>
+    <body>
+    <div id="start-screen">
+
+    <p class="first-title">🐹 My Capybara</p>
+    <p class="first-paragraf">Your adorable virtual pet is waiting for you!</p>
+    <p class="start-paragraf">Take care of Capy, keep it happy, unlock cute outfits, complete quests, collect trophies, and level up.</p>
+    <p class="start-text">❤️ Feed your Capybara
+    👕 Customize with clothes
+    🏆 Unlock achievements
+    🎁 Complete daily quests</p>
+    <button class="start-button" onclick="startGame()">🟢 START PLAYING</button>
     </div>
-    <button onclick="magazinul()"class="exit-button">Exit the Shop</button>
-</div>
-</div>
+<div id="dailyRewardPopup" class="daily-reward-popup">
 
-<button class="buton-shop" onclick="magazinulHaine()" style="top: 200px;">
-👕 Clothes
-</button>
+    <div class="daily-reward-content">
 
-<div id="magazinDeHaine" class="shop-panel-haine">
+        <h2>🌞 Welcome Back!</h2>
 
-    <div class="shop-content-haine">
+        <p>Capy missed you ❤️</p>
 
-        <h2>👕 Capy Clothes</h2>
+        <p class="reward-text">
+            You received:
+            <br>
+            🪙 +10 coins
+        </p>
 
-        <div>
-            <button onclick="echipeazaHaina('hat')" class="buton-palarie">
-                🎩 Buy Hat (50 coins)
-            </button>
-        </div>
-
-        <div>
-            <button onclick="echipeazaHaina('shirt')" class="buton-palarie">
-                👕 Buy Shirt (50 coins)
-            </button>
-            <button onclick="echipeazaHaina('glasses')" class="buton-palarie">By sunglasses🕶️ (50 coins)</button>
-        </div>
-
-        <div>
-            <button onclick="removeClothes()" class="remove-buton">
-                ❌ Remove Clothes (+100 coins)
-            </button>
-        </div>
-
-        <div>
-            <button onclick="magazinulHaine()" class="exit-button">
-                Exit Clothes
-            </button>
-        </div>
-
-    </div>
-
-</div>
-
- <button class="buton-panel" onclick="panelTrofee()">
-🏆 Trophies
-</button>
-
-
-<div id="trofeePanel" class="trofee-panel">
-
-    <div class="trofee-content">
-
-        <h2>🏆 Trophies</h2>
-
-        <div id="lista-trofee"></div>
-
-        <button onclick="panelTrofee()" class="exit-button">
-            Exit the Trophies
+        <button onclick="closeDailyReward()" class="reward-button">
+            Claim Reward 🎁
         </button>
 
     </div>
 
 </div>
+    <div id="second-page">
+    <div class="spark spark1"></div>
+    <div class="spark spark2"></div>
+    <div class="spark spark3"></div>
+    <div class="spark spark4"></div>
+    <div class="spark spark5"></div>
 
-<button class="buton-quests" onclick="panelQuests()" >📋 Daily Quests</button>
-<div id="quests" class="quests-panel">
-<div class="quests-content">
+    <div class="sun"></div>
+
+    <div class="leaf leaf1">🌿</div>
+    <div class="leaf leaf2">🍃</div>
+    <div class="leaf leaf3">🌱</div>
+
+    <button class="buton-shop" onclick="magazinul()">🛒 Shop</button>
+
+    <div id="shopPanel" class="shop-panel">
+    <div class="shop-content">
+    <h2>Capy Shop</h2>
+    <div class="shop-items">
+    <button onclick="mancareaPreferata()" class="button-s">Super Food</button>
+    <button onclick=" deschideCutia ()"class="button-s">Treasure hunt</button>
+    <button onclick="lotereie()"class="button-s">Lottery</button>
+    <button onclick="cumparaGradina()" class="button-s">
+🌱 Buy Garden 300
+</button>
+    </div>
+    <button onclick="magazinul()"class="exit-button">Exit the Shop</button>
+    </div>
+    </div>
+
+    <button class="buton-shopClothes" onclick="magazinulHaine()" style="top: 200px;">
+    👕 Clothes
+    </button>
+
+    <div id="magazinDeHaine" class="shop-panel-haine">
+
+    <div class="shop-content-haine">
+
+    <h2>👕 Capy Clothes</h2>
+
+    <div>
+    <button onclick="echipeazaHaina('hat')" class="buton-palarie">
+        🎩 Buy Hat (50 coins)
+    </button>
+    </div>
+
+    <div>
+    <button onclick="echipeazaHaina('shirt')" class="buton-palarie">
+        👕 Buy Shirt (50 coins)
+    </button>
+    <button onclick="echipeazaHaina('glasses')" class="buton-palarie">Buy sunglasses🕶️ (50 coins)</button>
+    </div>
+
+    <div>
+    <button onclick="removeClothes()" class="remove-buton">
+        ❌ Remove Clothes (+100 coins)
+    </button>
+    </div>
+
+    <div>
+    <button onclick="magazinulHaine()" class="exit-button">
+        Exit Clothes
+    </button>
+    </div>
+
+    </div>
+
+    </div>
+
+    <button class="buton-panel" onclick="panelTrofee()">
+    🏆 Trophies
+    </button>
+
+
+    <div id="trofeePanel" class="trofee-panel">
+
+    <div class="trofee-content">
+
+    <h2>🏆 Trophies</h2>
+
+    <div id="lista-trofee"></div>
+
+    <button onclick="panelTrofee()" class="exit-button">
+    Exit the Trophies
+    </button>
+
+    </div>
+
+    </div>
+<button class="garden-button" onclick="deschideGradina()">
+🌱Capy's garden
+</button>
+
+
+<div id="gardenPanel" class="garden-panel">
+
+<div class="garden-content">
+
+<h2>🌱 Capy's Garden</h2>
+
+<p id="garden-status">
+🌱 Empty soil
+</p>
+
+
+<div class="plant-buttons">
+
+
+<button onclick="planteaza('carrot')">
+🥕
+</button>
+
+
+<button onclick="planteaza('flower')">
+🌻
+</button>
+
+
+<button onclick="planteaza('strawberry')">
+🍓
+</button>
+
+
+<button onclick="planteaza('watermelon')">
+🍉
+</button>
+
+
+</div>
+
+
+<button class="collect-button" onclick="colecteazaRecompensa()">
+🎁 Collect
+</button>
+
+
+<button class="exit-button" onclick="deschideGradina()">
+Exit
+</button>
+
+
+</div>
+
+</div>
+    <button class="buton-quests" onclick="panelQuests()" >📋 Daily Quests</button>
+    <div id="quests" class="quests-panel">
+    <div class="quests-content">
     <h2> Daily Quests</h2>
     <div class="quests-items" id="lista-quests"></div>
     <p class="feedParagraf">Feed--- 0/10</p>
     <p class="loteryParagraf">Lottery---0/2</p>
     <p class="huntParagraf">Treasure hunt---0/3</p>
     <button onclick="dailyQuests()" class="button-s">
-Claim Reward 🎁
-</button>
+    Claim Reward 🎁
+    </button>
     <button onclick="panelQuests()" class="exit-button">Exit Daily Quests</button>
-</div>
-</div>
+    </div>
+    </div>
 
-<p class="js-monede"><span class="coin-emoji">💰</span>
-<span class="text-scor">0</span></p>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
-<p class="text">I am Capy and I am your virtual pet!</p>
-<p>You can feed me with these 5 treats!</p>
-<p class="capibara-text"></p>
-<p class="capi"></p>
-<p class="rezultat resultat-text"></p>
-<p class="js-scorul"></p>
+    <p class="js-monede"><span class="coin-emoji">💰</span>
+    <span class="text-scor">0</span></p>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+    <p class="text">I am Capy and I am your virtual pet!</p>
+    <p>You can feed me with these 5 treats!</p>
+    <p class="capibara-text"></p>
+    <p class="capi"></p>
+    <p class="rezultat resultat-text"></p>
+    <p class="js-scorul"></p>
 
-<div class="capybara-scene">
-<img id="capy-image" class="capibara" src="images/capy-image-5.png">
+    <div class="capybara-scene">
+    <img id="capy-image" class="capibara" src="images/capy-image-5.png">
 
-<img id="hat-layer" src="images/capy-image-hat.png" class="haina-fixa" style="display: none;">
-<img id="shirt-layer" src="images/polo.png" class="haina-fixa" style="display: none;">
-<img id="glasses-layer"
-     src="images/sunglasses.png"
-     class="haina-fixa"
-     style="display:none;">
-</div>
+    <img id="hat-layer" src="images/capy-image-hat.png" class="haina-fixa" style="display: none;">
+    <img id="shirt-layer" src="images/polo.png" class="haina-fixa" style="display: none;">
+    <img id="glasses-layer"
+    src="images/sunglasses.png"
+    class="haina-fixa"
+    style="display:none;">
+    </div>
 
-<button class="js-morcov buton"
-onclick="
-hranesteCapibara ('carrot')
-"
-><img class="morcov" src="images\morcov-buton-image.png">
-</button>
+    <button class="js-morcov buton"
+    onclick="
+    hranesteCapibara ('carrot')
+    "
+    ><img class="morcov" src="images\morcov-buton-image.png">
+    </button>
 
-<button class="js-mar buton"
-onclick=" hranesteCapibara ('apple')"
-><img class="mar" src="images\mar-buton-image.png">
+    <button class="js-mar buton"
+    onclick=" hranesteCapibara ('apple')"
+    ><img class="mar" src="images\mar-buton-image.png">
 
-</button>
+    </button>
 
-<button class="js-banana buton"
-onclick=" hranesteCapibara ('banana')"
-><img class="banana" src="images/banana-buton-image.png">
-</button>
+    <button class="js-banana buton"
+    onclick=" hranesteCapibara ('banana')"
+    ><img class="banana" src="images/banana-buton-image.png">
+    </button>
 
-<button class="js-capsuna buton"
-onclick=" hranesteCapibara ('strawbery')"
-><img class="capsuna" src="images/capsuna-buton-image.png">
-</button>
+    <button class="js-capsuna buton"
+    onclick=" hranesteCapibara ('strawbery')"
+    ><img class="capsuna" src="images/capsuna-buton-image.png">
+    </button>
 
-<button class="js-apa buton"
-onclick=" hranesteCapibara ('water')"
-><img class="apa" src="images/apa-buton-image.png">
-</button>
+    <button class="js-apa buton"
+    onclick=" hranesteCapibara ('water')"
+    ><img class="apa" src="images/apa-buton-image.png">
+    </button>
 
-<p class="js-nivel"></p>
+    <p class="js-nivel"></p>
 
-<p class="js-fericire"></p>
-<div class="container-input">
-<input class="js-input" placeholder="Type the name of the treat" >
-<button onclick="inputulJucator()" class="buton-feed">Feed Capy!</button>
-</div>
-<p id="mesaj-afisat"></p>
+    <p class="js-fericire"></p>
+    <div class="container-input">
+        <p class="prietenie-paragraf"></p>
+    <input class="js-input" placeholder="Type the name of the treat" >
+    <button onclick="inputulJucator()" class="buton-feed">Feed Capy!</button>
+    </div>
+    <p id="mesaj-afisat"></p>
+    </div>
+    <script>
+    function startGame() {
+    document.getElementById("start-screen").style.display = "none";
+    document.getElementById("second-page").style.display = "block";
 
-<script>
+    
+    if(!scorul.beginnerQuestShown){
 
-let scorul=  JSON.parse(localStorage.getItem
-('scorul')) ||{
-placut: 0,
-neplacut: 0,
-fericire: 50,
-nivel:1,
-monede:0,
-areCaciula: false,
-areTricou:false,
-areOchelari:false,
-caciulaCumparata: false,
+    setTimeout(function(){
+
+        alert("⭐ Beginner Quest: Feed Capy 3 times! (Reward:20 coins.)");
+
+        scorul.beginnerQuestShown = true;
+
+        localStorage.setItem('scorul', JSON.stringify(scorul));
+
+    },1000)
+
+}
+    if (scorul.welcomeBonus !== true) {
+
+    setTimeout ( function () {
+    alert("Hi! Thank you for entering! You recieved 20 coins, have fun!")
+    scorul.monede+=20
+    scorul.welcomeBonus = true;
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    },800)
+     dailyReward()
+    }
+    }
+    let scorul=  JSON.parse(localStorage.getItem
+    ('scorul')) ||{
+    placut: 0,
+    neplacut: 0,
+    fericire: 50,
+    nivel:1,
+    monede:0,
+    areCaciula: false,
+    areTricou:false,
+    areOchelari:false,
+    caciulaCumparata: false,
     tricouCumparat: false,
     totalHraniri: 0,
-loteriiCastigate: 0,
-achievements: {
+    loteriiCastigate: 0,
+    achievements: {
     gurmand: false,
     fashionIcon: false,
-    norocosul: false
+    norocosul: false,
+    richCapy:false,
+    gurmandPlus:false,
+    nivelLevel:false,
+    bestFriend: false,
+    superFriend:false,
+    },
+    feedIndex:0,
+    lotteryIndex:0,
+    huntIndex:0,
+    dailyRewardClaimed:false,
+   dailyLastReset:0,
+    welcomeBonus:false,
+    beginnerRewardClaimed: false,
+    dailyLoginClaimed:false,
+    beginnerQuestShown:false,
+    prietenie:20,
+    gusturiDescoperite:{
+    mar:false,
+    banana:false,
+    morcov:false,
+    apa:false,
+    capsuna:false,
 },
-feedIndex:0,
-lotteryIndex:0,
-huntIndex:0,
-dailyRewardClaimed:false,
-dailyLastReset: Date.now() 
+garden:false,
+plantata:"",
+gardenTime:0,
+gardenReady:false,
+colector:0,
+beginnerQuest:0, 
+    }
+
+    document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+    document.querySelector('.feedParagraf').innerHTML=scorul.feedIndex;
+    if (scorul.gusturiDescoperite === undefined) {
+    scorul.gusturiDescoperite = {
+        mar: false,
+        banana: false,
+        morcov: false,
+        apa: false,
+        capsuna: false
+    };
+
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+}
+if (scorul.gardenReady== undefined) {
+    scorul.gardenReady= false
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+if (scorul.gardenTime== undefined) {
+    scorul.gardenTime= 0
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+if(scorul.achievements.gurmand === undefined){
+    scorul.achievements.gurmand = false;
 }
 
-document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
-document.querySelector('.text-scor').innerHTML = scorul.monede;
-document.querySelector('.feedParagraf').innerHTML=scorul.feedIndex;
-if (scorul.fericire === undefined) {
-scorul.fericire = 50;
-localStorage.setItem('scorul', JSON.stringify(scorul));
+if(scorul.achievements.gurmandPlus === undefined){
+    scorul.achievements.gurmandPlus = false;
 }
-if (scorul.nivel === undefined) {
-scorul.nivel = 1;
-localStorage.setItem('scorul', JSON.stringify(scorul));
+if (scorul.plantata=== undefined) {
+    scorul.plantata = ""
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+if(scorul.achievements.superFriend === undefined){
+    scorul.achievements.superFriend = false;
 }
+
+if (scorul.garden=== undefined) {
+    scorul.garden = false
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+    if (scorul.prietenie === undefined) {
+    scorul.prietenie = 20;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+    if (scorul.fericire === undefined) {
+    scorul.fericire = 50;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+    if (scorul.nivel === undefined) {
+    scorul.nivel = 1;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
     if (scorul.monede === undefined) {
-scorul.monede = 0;
-localStorage.setItem('scorul', JSON.stringify(scorul));
-}
+    scorul.monede = 0;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
 
+if (scorul.colector === undefined) {
+    scorul.colector = 0;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+    if (scorul.loteriiCastigate === undefined) {
+    scorul.loteriiCastigate = 0;
+    }
+    if (scorul.feedIndex=== undefined) {
+    scorul.feedIndex=0
+    }
+    if (scorul.lotteryIndex === undefined) {
+    scorul.lotteryIndex = 0;
+    }
 
-if (scorul.loteriiCastigate === undefined) {
-scorul.loteriiCastigate = 0;
-}
-if (scorul.feedIndex=== undefined) {
-scorul.feedIndex=0
-}
-if (scorul.lotteryIndex === undefined) {
-scorul.lotteryIndex = 0;
-}
+    if (scorul.huntIndex === undefined) {
+    scorul.huntIndex = 0;
+    }
+    if (scorul.achievements === undefined) {
 
-if (scorul.huntIndex === undefined) {
-scorul.huntIndex = 0;
-}
-if (scorul.achievements === undefined) {
-
-scorul.achievements = {
+    scorul.achievements = {
     gurmand: false,
     fashionIcon: false,
-    norocosul: false
-};
+    norocosul: false,
+    richCapy:false,
+    gurmandPlus:false,
+    nivelLevel:false,
+    bestFriend:false,
+    superFriend:false,
+    };
 
+    localStorage.setItem('scorul', JSON.stringify(scorul));
 
-localStorage.setItem('scorul', JSON.stringify(scorul));
-
-}
-if (scorul.dailyLastReset === undefined) {
+    }
+    if (scorul.dailyLastReset === undefined) {
     scorul.dailyLastReset = Date.now();
-}
+    }
 
-if (scorul.dailyRewardClaimed === undefined) {
+    if (scorul.dailyRewardClaimed === undefined) {
     scorul.dailyRewardClaimed = false;
+    }
+    if (scorul.beginnerQuest === undefined) {
+    scorul.beginnerQuest = 0;
+    }
+
+    if (scorul.beginnerRewardClaimed === undefined) {
+    scorul.beginnerRewardClaimed = false;
+    }
+if(scorul.achievements.nivelLevel === undefined){
+    scorul.achievements.nivelLevel = false;
 }
+
+if(scorul.achievements.gurmandPlus === undefined){
+    scorul.achievements.gurmandPlus = false;
+}
+
+if(scorul.achievements.bestFriend === undefined){
+    scorul.achievements.bestFriend = false;
+}
+
 localStorage.setItem('scorul', JSON.stringify(scorul));
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    localStorage.setItem('scorul', JSON.stringify(scorul));
 
-document.querySelector('.feedParagraf').innerHTML = `Feed--- ${scorul.feedIndex}/10`;
+    document.querySelector('.feedParagraf').innerHTML = `Feed--- ${scorul.feedIndex}/10`;
 
-document.querySelector('.loteryParagraf').innerHTML = `Lottery--- ${scorul.lotteryIndex}/3`;
+    document.querySelector('.loteryParagraf').innerHTML = `Lottery--- ${scorul.lotteryIndex}/3`;
 
-document.querySelector('.huntParagraf').innerHTML = `Treasure hunt--- ${scorul.huntIndex}/3`;
-localStorage.setItem('scorul', JSON.stringify(scorul));
-function incarcaHaine(){
+    document.querySelector('.huntParagraf').innerHTML = `Treasure hunt--- ${scorul.huntIndex}/3`;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
 
-document.getElementById('hat-layer').style.display =
-scorul.areCaciula ? "block":"none";
+    document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
 
-document.getElementById('shirt-layer').style.display =
-scorul.areTricou ? "block":"none";
+      localStorage.setItem('scorul', JSON.stringify(scorul));
 
-document.getElementById('glasses-layer').style.display =
-scorul.areOchelari ? "block":"none";
+    function incarcaHaine(){
 
-}
-function incarcaHaine(){
+    document.getElementById('hat-layer').style.display =
+    scorul.areCaciula ? "block":"none";
 
-document.getElementById('hat-layer').style.display =
-scorul.areCaciula ? "block":"none";
+    document.getElementById('shirt-layer').style.display =
+    scorul.areTricou ? "block":"none";
 
-document.getElementById('shirt-layer').style.display =
-scorul.areTricou ? "block":"none";
+    document.getElementById('glasses-layer').style.display =
+    scorul.areOchelari ? "block":"none";
 
-document.getElementById('glasses-layer').style.display =
-scorul.areOchelari ? "block":"none";
+    }
+   
+   window.onload = function() {
 
-}
+incarcaHaine();
 
-window.onload = function() {
-incarcaHaine()
+verificaGradina();
 
 document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+
 document.querySelector('.text-scor').innerHTML = scorul.monede;
+
 };
-let preferinta=''
-let mesaj=''
 
-function hranesteCapibara (hrana) {
-    let container = document.querySelector('.capybara-scene');
-let imagineCapibara = document.getElementById('capy-image');
-let numar= Math.random()
-
-if (numar>=0 && numar<0.23 ) {
-preferinta='apple'
-} else if(numar>=0.23 && numar<0.36) {
-preferinta= 'water'
-}else if(numar>=0.36 && numar<0.40) {
-preferinta='strawbery'
-} else if(numar>=0.40 && numar< 0.55) {
-preferinta='banana'
-} else if (numar>=0.55 && numar<1) {
-preferinta='carrot'
+   function planteaza(planta) {
+    if(!scorul.garden){
+alert("You need to buy a garden first!");
+return;
 }
 
-if(preferinta===hrana) {
-mesaj= `I love you!😍😍😍${hrana} was very good!🤗🤗🤗`
-document.getElementById('capy-image').src = "images/happy-capy.png";
-container.className = "capybara-scene happy-mode";
-scorul.placut+=1
-scorul.fericire+=15
-if(scorul.feedIndex<10){
-    scorul.feedIndex++;
+if(scorul.plantata!=""){
+alert("Something is already growing!");
+return;
 }
-document.querySelector('.feedParagraf').innerHTML = `Feed--- ${scorul.feedIndex}/10`;
-document.querySelector('.rezultat').innerHTML = mesaj;
+scorul.plantata=planta;
+scorul.gardenReady = false;
+scorul.gardenTime=Date.now();
+document.getElementById("garden-status").innerHTML =
+"🌱 Your " + planta + " is growing...";
 
+alert("🌱 Your "+planta+" is growing!");
+
+localStorage.setItem(
+'scorul',
+JSON.stringify(scorul)
+);
+   }
+   function verificaGradina(){
+
+if(scorul.plantata==""){
+    return;
+}
+
+let timpCrestere = 0;
+
+if(scorul.plantata=="carrot"){
+    timpCrestere = 10000;
+}
+
+if(scorul.plantata=="flower"){
+    timpCrestere = 60000;
+}
+
+if(scorul.plantata=="strawberry"){
+    timpCrestere = 120000;
+}
+
+if(scorul.plantata=="watermelon"){
+    timpCrestere = 180000;
+}
+
+
+if(Date.now()-scorul.gardenTime >= timpCrestere){
+
+    scorul.gardenReady=true;
+
+    document.getElementById("garden-status").innerHTML =
+    "🎉 Your plant is ready!";
+
+}else{
+
+    scorul.gardenReady=false;
+
+    document.getElementById("garden-status").innerHTML =
+    "🌱 Your "+scorul.plantata+" is growing...";
+
+}
+
+
+localStorage.setItem(
+'scorul',
+JSON.stringify(scorul)
+);
+
+}
+   
+   function colecteazaRecompensa(){
+    if(!scorul.gardenReady){
+alert("Not ready yet!");
+return;
+}
+if(scorul.plantata=="carrot"){
+
+alert("🥕 You got a carrot!");
+scorul.monede+=20;
+scorul.fericire+=20;
+scorul.prietenie+=15;
+resetareaJocului();
 document.querySelector('.js-fericire').innerHTML =
-`Happines: ${scorul.fericire}%`;
+    `Happiness: ${scorul.fericire}%`;
+document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+  document.querySelector('.text-scor').innerHTML = scorul.monede;
+   document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
 
-document.querySelector('.js-scorul').innerHTML =
-`I liked:${scorul.placut} I didn't like:${scorul.neplacut}`;
+      localStorage.setItem('scorul', JSON.stringify(scorul));
+}
+if(scorul.plantata=="flower"){
 
-localStorage.setItem('scorul', JSON.stringify(scorul))
-if(scorul.fericire>100) {
-scorul.fericire=100;
+alert("🌻 You got a flower!");
+scorul.monede+=20;
+scorul.fericire+=20
+scorul.prietenie+=15;
+resetareaJocului();
+document.querySelector('.js-fericire').innerHTML =
+    `Happines: ${scorul.fericire}%`;
+document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+  document.querySelector('.text-scor').innerHTML = scorul.monede;
+   document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+
+      localStorage.setItem('scorul', JSON.stringify(scorul));
 }
-if(scorul.feedIndex>10) {
-scorul.feedIndex=10;
+if(scorul.plantata=="strawberry"){
+
+alert("🍓 You got a strawberry!");
+
+scorul.monede+=20;
+scorul.prietenie+=15
+scorul.fericire+=20
+resetareaJocului();
+document.querySelector('.js-fericire').innerHTML =
+    `Happines: ${scorul.fericire}%`;
+document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+  document.querySelector('.text-scor').innerHTML = scorul.monede;
+   document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+
+      localStorage.setItem('scorul', JSON.stringify(scorul));
+}if(scorul.plantata=="watermelon"){
+
+alert("🍉 You got a watermelon!");
+
+scorul.monede+=20;
+scorul.prietenie+=15
+scorul.fericire+=20
+resetareaJocului();
+document.querySelector('.js-fericire').innerHTML =
+    `Happines: ${scorul.fericire}%`;
+document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+  document.querySelector('.text-scor').innerHTML = scorul.monede;
+   document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+
+      localStorage.setItem('scorul', JSON.stringify(scorul));
 }
-} else{
-mesaj=`I don't want ${hrana}! I want something else!`
-document.getElementById('capy-image').src = "images/capy-sad-image.png";
-container.className = "capybara-scene sad-mode";
-scorul.neplacut+=1
-scorul.fericire-=2;
-if(scorul.feedIndex<10){
+document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+  document.querySelector('.text-scor').innerHTML = scorul.monede;
+   document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+
+      localStorage.setItem('scorul', JSON.stringify(scorul));
+      scorul.plantata = "";
+scorul.gardenReady = false;
+scorul.gardenTime = 0;
+
+document.getElementById("garden-status").innerHTML =
+"🌱 Choose a plant to grow";
+
+localStorage.setItem(
+'scorul',
+JSON.stringify(scorul)
+);
+   }
+
+
+function cumparaGradina(){
+
+if(scorul.garden){
+
+alert("You already have a garden!");
+
+return;
+
+}
+
+
+if(scorul.monede<300){
+
+alert("You need 300 coins!");
+
+return;
+
+}
+
+
+scorul.monede-=300;
+
+scorul.garden=true;
+
+
+alert("🌱 You bought a garden!");
+
+document.querySelector('.text-scor').innerHTML=scorul.monede;
+
+
+localStorage.setItem(
+'scorul',
+JSON.stringify(scorul)
+);
+
+
+}
+
+    let preferinta=''
+    let mesaj=''
+
+    function hranesteCapibara (hrana) {
+    let container = document.querySelector('.capybara-scene');
+    let imagineCapibara = document.getElementById('capy-image');
+    let numar= Math.random()
+
+    if (numar>=0 && numar<0.23 ) {
+    preferinta='apple'
+    scorul.gusturiDescoperite.mar= true
+    } else if(numar>=0.23 && numar<0.36) {
+    preferinta= 'water'
+    scorul.gusturiDescoperite.apa=true
+    }else if(numar>=0.36 && numar<0.40) {
+    preferinta='strawbery'
+    scorul.gusturiDescoperite.capsuna=true
+    } else if(numar>=0.40 && numar< 0.55) {
+    preferinta='banana'
+    scorul.gusturiDescoperite.banana=true
+    } else if (numar>=0.55 && numar<1) {
+    preferinta='carrot'
+    scorul.gusturiDescoperite.morcov=true
+    }
+
+    if(preferinta===hrana) {
+    mesaj= `I love you!😍😍😍${hrana} was very good!🤗🤗🤗`
+    document.getElementById('capy-image').src = "images/happy-capy.png";
+    container.className = "capybara-scene happy-mode";
+    scorul.placut+=1
+    scorul.fericire+=15
+    scorul.prietenie+=5
+    verificaTrofee();
+    if(scorul.feedIndex<10){
     scorul.feedIndex++;
-}
-document.querySelector('.feedParagraf').innerHTML = `Feed--- ${scorul.feedIndex}/10`;
-if(scorul.fericire<0) {
-scorul.fericire=0
-}
+    }
+    if(scorul.beginnerQuest < 3){
+    scorul.beginnerQuest++;
+    }
+    document.querySelector('.feedParagraf').innerHTML = `Feed--- ${scorul.feedIndex}/10`;
+    document.querySelector('.rezultat').innerHTML = mesaj;
+
+    document.querySelector('.js-fericire').innerHTML =
+    `Happines: ${scorul.fericire}%`;
+
+    document.querySelector('.js-scorul').innerHTML =
+    `I liked:${scorul.placut} I didn't like:${scorul.neplacut}`;
+
+document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+
+    
+    if(scorul.fericire>100) {
+    scorul.fericire=100;
+    }
     if(scorul.feedIndex>10) {
-scorul.feedIndex=10;
-}
-document.querySelector('.rezultat')
-.innerHTML= mesaj
-document.querySelector('.js-fericire')
-.innerHTML=`Happines: ${scorul.fericire}%`
-localStorage.setItem('scorul',JSON.stringify(scorul))
-document.querySelector('.js-scorul')
-.innerHTML=`I liked:${scorul.placut}  I didn't like :${scorul.neplacut}`
-localStorage.setItem('scorul', JSON.stringify(scorul))
-document.querySelector('.js-scorul')
-.innerHTML= `I liked:${scorul.placut} I didn't like:${scorul.neplacut}`
+    scorul.feedIndex=10;
+    }
+    localStorage.setItem('scorul', JSON.stringify(scorul))
+    if(scorul.beginnerQuest === 3 && !scorul.beginnerRewardClaimed){
 
-}
+    alert("🎉 Beginner Quest Complete!Reward: +20 coins 🪙");
+
+    scorul.monede += 20;
+scorul.prietenie+=10
 verificaTrofee();
-resetareaJocului()
-}
+    scorul.beginnerRewardClaimed = true;
 
-document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
-setInterval(function() {
-if(scorul.fericire>0 && scorul.fericire<100) {
-scorul.fericire-=1;
-}
-if(scorul.fericire<0) {
-scorul.fericire=0
-}
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
 
-document.querySelector('.js-fericire')
-.innerHTML = `Happines: ${scorul.fericire}%`;
-localStorage.setItem('scorul', JSON.stringify(scorul));
-resetareaJocului()
-},10800000  );
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+    } else{
+    mesaj=`I don't want ${hrana}! I want something else!`
+    document.getElementById('capy-image').src = "images/capy-sad-image.png";
+    container.className = "capybara-scene sad-mode";
+    scorul.neplacut+=1
+    scorul.fericire-=2;
+    scorul.prietenie-=5
+    verificaTrofee();
+    if(scorul.feedIndex<10){
+    scorul.feedIndex++;
+    }
+    if(scorul.beginnerQuest < 3){
+    scorul.beginnerQuest++;
+    }
+    document.querySelector('.feedParagraf').innerHTML = `Feed--- ${scorul.feedIndex}/10`;
+    if(scorul.fericire<0) {
+    scorul.fericire=0
+    }
+    if(scorul.feedIndex>10) {
+    scorul.feedIndex=10;
+    }
+     if(scorul.prietenie<0) {
+    scorul.prietenie=0
+    }
+    document.querySelector('.rezultat')
+    .innerHTML= mesaj
+    document.querySelector('.js-fericire')
+    .innerHTML=`Happines: ${scorul.fericire}%`
+    localStorage.setItem('scorul',JSON.stringify(scorul))
+    document.querySelector('.js-scorul')
+    .innerHTML=`I liked:${scorul.placut}  I didn't like :${scorul.neplacut}`
+    localStorage.setItem('scorul', JSON.stringify(scorul))
+    document.querySelector('.js-scorul')
+    .innerHTML= `I liked:${scorul.placut} I didn't like:${scorul.neplacut}`
+     document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship:${scorul.prietenie}%`;
+    
+    if(scorul.beginnerQuest === 3 && !scorul.beginnerRewardClaimed){
 
-function reseteazaJocul() {
-scorul.fericire = 50;
-scorul.placut = 0;
-scorul.neplacut = 0;
-localStorage.setItem('scorul', JSON.stringify(scorul));
+    alert("🎉 Beginner Quest Complete! Reward: +20 coins ");
 
-document.querySelector('.rezultat').innerHTML = ""; 
-document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`; 
-document.querySelector('.js-scorul').innerHTML = `I liked:${scorul.placut}  I didn't like:${scorul.neplacut}`; 
+    scorul.monede += 20;
 
-let container = document.querySelector('.capybara-scene');
-container.className = "capybara-scene";
+    scorul.beginnerRewardClaimed = true;
 
-let imagineCapibara = document.querySelector('.capibara');
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
+    }
+    verificaTrofee();
+    resetareaJocului();
+   
+    }
+
+    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
+    setInterval(function() {
+    if(scorul.fericire>0 && scorul.fericire<100) {
+    scorul.fericire-=20;
+    }
+    if(scorul.fericire<0) {
+    scorul.fericire=0
+    }
+
+    document.querySelector('.js-fericire')
+    .innerHTML = `Happines: ${scorul.fericire}%`;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    resetareaJocului()
+    },10800000  );
+
+    function reseteazaJocul() {
+    scorul.fericire = 50;
+    scorul.placut = 0;
+    scorul.neplacut = 0;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+
+    document.querySelector('.rezultat').innerHTML = ""; 
+    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`; 
+    document.querySelector('.js-scorul').innerHTML = `I liked:${scorul.placut}  I didn't like:${scorul.neplacut}`; 
+
+    let container = document.querySelector('.capybara-scene');
+    container.className = "capybara-scene";
+
+    let imagineCapibara = document.querySelector('.capibara');
     imagineCapibara.src = "images/capy-image-5.png";
-   document.getElementById('hat-layer').style.display =
-scorul.areCaciula ? "block" : "none";
+    document.getElementById('hat-layer').style.display =
+    scorul.areCaciula ? "block" : "none";
 
-document.getElementById('shirt-layer').style.display =
-scorul.areTricou ? "block" : "none";
+    document.getElementById('shirt-layer').style.display =
+    scorul.areTricou ? "block" : "none";
 
-document.getElementById('glasses-layer').style.display =
-scorul.areOchelari ? "block" : "none";
-}
-function magazinulHaine() {
-let panel = document.getElementById('magazinDeHaine');
-if (panel.style.display === 'block') {
-panel.style.display = 'none';
-} else {
-panel.style.display = 'block';
-}
-}
-
-function panelTrofee() {
-let panel = document.getElementById('trofeePanel');
-if (panel.style.display === 'block') {
+    document.getElementById('glasses-layer').style.display =
+    scorul.areOchelari ? "block" : "none";
+    }
+    function magazinulHaine() {
+    let panel = document.getElementById('magazinDeHaine');
+    if (panel.style.display === 'block') {
     panel.style.display = 'none';
-} else {
+    } else {
+    panel.style.display = 'block';
+    }
+    }
+function deschideGradina(){
+
+let panel=document.getElementById("gardenPanel");
+
+
+if(panel.style.display=="block"){
+
+panel.style.display="none";
+
+}else{
+
+panel.style.display="block";
+
+verificaGradina();
+
+}
+
+}
+    function panelTrofee() {
+    let panel = document.getElementById('trofeePanel');
+    if (panel.style.display === 'block') {
+    panel.style.display = 'none';
+    } else {
     listaTrofee();
     panel.style.display = 'block';
-}
-}
+    }
+    }
 
     function panelQuests() {
-let panel = document.getElementById('quests');
-if (panel.style.display === 'block') {
+    let panel = document.getElementById('quests');
+    if (panel.style.display === 'block') {
     panel.style.display = 'none';
-} else {
+    } else {
     panel.style.display = 'block';
-}
-}
+    }
+    }
 
-function listaTrofee() {
-let lista= document.getElementById('lista-trofee');
-let a=scorul.achievements.gurmand
-let b=scorul.achievements.fashionIcon
-let c=scorul.achievements.norocosul
+    function listaTrofee() {
+    let lista= document.getElementById('lista-trofee');
+    let a=scorul.achievements.gurmand
+    let b=scorul.achievements.fashionIcon
+    let c=scorul.achievements.norocosul
+ let d=scorul.gusturiDescoperite
+let e = scorul.monede >= 1000;
+let f=scorul.achievements.gurmandPlus
+let g= scorul.achievements.nivelLevel
+let k=scorul.achievements.bestFriend
+let j=scorul.achievements.superFriend
+    lista.innerHTML=`
+    <div class="trofeu-item ${a ? '' : 'trofeu-blocat'}">
+    <span>🍔 Gurmand</span>
+    <span>${a ? '✅ Unlocked' : (scorul.placut + scorul.neplacut) + '/150'}</span>
+    </div>
 
-lista.innerHTML=`
-<div class="trofeu-item ${a ? '' : 'trofeu-blocat'}">
-<span>🍔 Gurmand</span>
-<span>${a ? '✅ Unlocked' : (scorul.placut + scorul.neplacut) + '/150'}</span>
+    <div class="trofeu-item ${b ? '' : 'trofeu-blocat'}">
+    <span>👕 Fashion Icon</span>
+    <span>${b ? '✅ Unlocked' : ((scorul.areCaciula ? 1 : 0) + (scorul.areTricou ? 1 : 0)) + '/3'}</span>
+    </div>
+
+    <div class="trofeu-item ${c ? '' : 'trofeu-blocat'}">
+    <span>🍀 Lucky Day</span>
+    <span>${c ? '✅ Unlocked' : (scorul.loteriiCastigate || 0) + '/2'}</span>
+    </div>
+
+    <div class="trofeu-item ${d ? '' : 'trofeu-blocat'}">
+    <span>🥕 Taste Collector</span>
+    <span>${
+        d 
+        ? '✅ Unlocked' 
+        : (
+        (scorul.gusturiDescoperite.mar ? 1 : 0) +
+        (scorul.gusturiDescoperite.banana ? 1 : 0) +
+        (scorul.gusturiDescoperite.morcov ? 1 : 0) +
+        (scorul.gusturiDescoperite.apa ? 1 : 0) +
+        (scorul.gusturiDescoperite.capsuna ? 1 : 0)
+        ) + '/5'
+    }</span>
+</div>
+ <div class="trofeu-item ${e ? '' : 'trofeu-blocat'}">
+    <span>💰 Rich Capy</span>
+    <span>${e ? '✅ Unlocked' : scorul.monede + '/1000'}</span>
+</div>
+<div class="trofeu-item ${f ? '' : 'trofeu-blocat'}">
+    <span>🍽️ Feeding Expert</span>
+    <span>${f ? '✅ Unlocked' : (scorul.placut + scorul.neplacut) + '/500'}</span>
 </div>
 
-<div class="trofeu-item ${b ? '' : 'trofeu-blocat'}">
-<span>👕 Fashion Icon</span>
-<span>${b ? '✅ Unlocked' : ((scorul.areCaciula ? 1 : 0) + (scorul.areTricou ? 1 : 0)) + '/3'}</span>
+    <div class="trofeu-item ${g ? '' : 'trofeu-blocat'}">
+    <span>👑 Capy Master</span>
+    <span>${g ? '✅ Unlocked' : scorul.nivel + '/25'}</span>
 </div>
 
-<div class="trofeu-item ${c ? '' : 'trofeu-blocat'}">
-<span>🍀 Lucky Day</span>
-<span>${c ? '✅ Unlocked' : (scorul.loteriiCastigate || 0) + '/3'}</span>
+    <div class="trofeu-item ${k ? '' : 'trofeu-blocat'}">
+    <span>🤝 New Friend</span>
+    <span>${k ? '✅ Unlocked' : scorul.prietenie + '/50'}</span>
 </div>
-`
-}
-function verificaTrofee () {
-if(!scorul.achievements.gurmand && (scorul.placut + scorul.neplacut) >= 150) {
-scorul.achievements.gurmand = true;
+
+    <div class="trofeu-item ${j ? '' : 'trofeu-blocat'}">
+    <span>💖 True Owner</span>
+    <span>${j ? '✅ Unlocked' : scorul.prietenie + '/300'}</span>
+</div>
+
+    `
+    }
+    function verificaTrofee () {
+    if(!scorul.achievements.gurmand && (scorul.placut + scorul.neplacut) >= 150) {
+    scorul.achievements.gurmand = true;
     scorul.monede += 120;
+    scorul.prietenie+=20
     alert("🏆 Achievement Unlocked: Gurmand! You won 100 coins!");
-} else if(!scorul.achievements.fashionIcon&& scorul.areCaciula && scorul.areTricou) {
-scorul.achievements.fashionIcon=true
-scorul.monede += 50;
-scorul.fericire+=20;
-alert("🏆 Achievement Unlocked: Fashion Icon! You won 150 coins!");
-} else if(!scorul.achievements.norocosul && scorul.loteriiCastigate===3) {
-scorul.achievements.norocosul=true
-scorul.monede+=100
-alert("🏆 Achievement Unlocked: Lucky day! You won 200 coins!");
+    }  if(!scorul.achievements.fashionIcon&& scorul.areCaciula && scorul.areTricou) {
+    scorul.achievements.fashionIcon=true
+    scorul.monede += 50;
+    scorul.fericire+=20;
+    scorul.prietenie+=20
+    alert("🏆 Achievement Unlocked: Fashion Icon! You won 150 coins!");
+    }  if(!scorul.achievements.norocosul && scorul.loteriiCastigate===3) {
+    scorul.achievements.norocosul=true
+    scorul.monede+=100
+    scorul.prietenie+=10
+    alert("🏆 Achievement Unlocked: Lucky day! You won 200 coins!");
+    } if(
+    !scorul.achievements.tasteCollector &&
+    scorul.gusturiDescoperite.mar &&
+    scorul.gusturiDescoperite.banana &&
+    scorul.gusturiDescoperite.morcov &&
+    scorul.gusturiDescoperite.apa &&
+    scorul.gusturiDescoperite.capsuna
+){
+    scorul.achievements.tasteCollector = true;
+    scorul.monede += 150;
+    scorul.prietenie += 20;
+    
+
+    alert("🏆 Achievement Unlocked: Taste Collector! You won 150 coins!");
 }
-localStorage.setItem('scorul', JSON.stringify(scorul));
-document.querySelector('.text-scor').innerHTML = scorul.monede;
+  if(!scorul.achievements.richCapy && scorul.monede >= 1000){
+    scorul.achievements.richCapy = true;
+    scorul.prietenie += 20;
+    
+    alert("🏆 Achievement Unlocked: Rich Capy! You reached 1000 coins!");
+} if(!scorul.achievements.gurmandPlus && (scorul.placut + scorul.neplacut) >= 500) {
+   
+    scorul.achievements.gurmandPlus= true;
+    scorul.monede += 120;
+    scorul.prietenie+=20
+   
+    alert("🏆 Achievement Unlocked: 🍽️ Feeding Expert! You won 100 coins!");}
+
+ if(!scorul.achievements.nivelLevel && scorul.nivel >= 25) {
+    scorul.achievements.nivelLevel = true;
+    scorul.monede += 100;
+    scorul.prietenie += 15;
+   
+    alert("🏆 Achievement Unlocked: 👑 Capy Master! You won 100 coins!");
+}
+ if(!scorul.achievements.bestFriend && Number(scorul.prietenie) >= 50) {
+    scorul.achievements.bestFriend = true;
+    scorul.monede += 100;
+    scorul.prietenie += 15;
+   
+    alert("🏆 Achievement Unlocked: 🤝 New Friend! You won 100 coins!");
 }
 
-function echipeazaHaina(tipHaina) {
-if (scorul.monede < 50) {
+if(!scorul.achievements.superFriend && Number(scorul.prietenie) >= 300) {
+    scorul.achievements.superFriend = true;
+    scorul.monede += 100;
+    scorul.prietenie += 15;
+   
+    alert("🏆 Achievement Unlocked: 💖 True Owner! You won 100 coins!");
+}
+
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+     document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+ localStorage.setItem('scorul', JSON.stringify(scorul));
+    
+    }
+    function echipeazaHaina(tipHaina) {
+    if (scorul.monede < 50) {
     alert("Nu ai destule monede! (Ai nevoie de 50)");
     return;
-}
-if (tipHaina === 'hat' && !scorul.areCaciula) {
+    }
+    if (tipHaina === 'hat' && !scorul.areCaciula) {
     scorul.monede-=50
     scorul.areCaciula = true;
+    scorul.prietenie+=10
     document.getElementById('hat-layer').style.display = 'block';
     document.querySelector('.text-scor').innerHTML = scorul.monede;
-} else if(tipHaina === 'shirt' && !scorul.areTricou) {
-        scorul.monede-=50
+     document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    } else if(tipHaina === 'shirt' && !scorul.areTricou) {
+    scorul.monede-=50
     scorul.areTricou= true
-        document.getElementById('shirt-layer').style.display = 'block';
-        document.querySelector('.text-scor').innerHTML = scorul.monede;
-}else if(tipHaina === 'glasses' && !scorul.areOchelari) {
- scorul.monede-=50
+    scorul.prietenie+=10
+    document.getElementById('shirt-layer').style.display = 'block';
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+     document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    }else if(tipHaina === 'glasses' && !scorul.areOchelari) {
+    scorul.monede-=50
+    scorul.prietenie+=10
+    verificaTrofee();
     scorul.areOchelari = true;
     document.getElementById('glasses-layer').style.display = 'block';
-     document.querySelector('.text-scor').innerHTML = scorul.monede;
-}
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+       document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    }
 
-else{
+    else{
     alert(' Sorry. You already have these one.')
+    }
+
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    verificaTrofee();
+    }
+function closeDailyReward(){
+
+document.getElementById("dailyRewardPopup").style.display="none";
+
 }
 
-localStorage.setItem('scorul', JSON.stringify(scorul));
-verificaTrofee();
-}
-
-
-function removeClothes() {
-if (
-!scorul.areCaciula &&
-!scorul.areTricou &&
-!scorul.areOchelari
-) { 
+    function removeClothes() {
+    if (
+    !scorul.areCaciula &&
+    !scorul.areTricou &&
+    !scorul.areOchelari
+    ) { 
     alert("You are not wearing anything!");
     return;
+    }
+    let numarHaine = 0;
+
+if(scorul.areCaciula){
+    numarHaine++;
 }
-const returneaza = 100;
+
+if(scorul.areTricou){
+    numarHaine++;
+}
+
+if(scorul.areOchelari){
+    numarHaine++;
+}
+
 scorul.areCaciula = false;
 scorul.areTricou = false;
 scorul.areOchelari = false;
 
-scorul.monede += returneaza;
-document.getElementById('hat-layer').style.display = 'none';
-document.getElementById('shirt-layer').style.display = 'none';
-document.getElementById('glasses-layer').style.display = 'none';
+scorul.monede += numarHaine * 50;
+    document.getElementById('hat-layer').style.display = 'none';
+    document.getElementById('shirt-layer').style.display = 'none';
+    document.getElementById('glasses-layer').style.display = 'none';
 
-document.querySelector('.text-scor').innerHTML = scorul.monede;
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
 
-localStorage.setItem('scorul', JSON.stringify(scorul));
-}
-
-
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
 
 
 
-function magazinul() {
-let panel = document.getElementById('shopPanel');
-if (panel.style.display === 'block') {
-panel.style.display = 'none';
-} else {
-panel.style.display = 'block';
-}
-}
 
-function lotereie() {
-if (scorul.monede < 20) {
+
+    function magazinul() {
+    let panel = document.getElementById('shopPanel');
+    if (panel.style.display === 'block') {
+    panel.style.display = 'none';
+    } else {
+    panel.style.display = 'block';
+    }
+    }
+
+    function lotereie() {
+    if (scorul.monede < 20) {
     alert('You do not have enough coins. You need 20 coins');
     return;
-}
+    }
 
-scorul.monede -= 20;
-scorul.lotteryIndex+=1
-if(scorul.lotteryIndex>=3) {
-scorul.lotteryIndex=3
-}
-document.querySelector('.loteryParagraf').innerHTML = 
-`Lottery--- ${scorul.lotteryIndex}/3`;
-localStorage.setItem('scorul', JSON.stringify(scorul));
-let s = Math.random();
+    scorul.monede -= 20;
+    scorul.lotteryIndex+=1
+    scorul.prietenie+=5
+    verificaTrofee();
+    if(scorul.lotteryIndex>=3) {
+    scorul.lotteryIndex=3
+    }
+    document.querySelector('.loteryParagraf').innerHTML = 
+    `Lottery--- ${scorul.lotteryIndex}/3`;
+       document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    let s = Math.random();
 
-if (s >= 0.5 && s < 1) {
+    if (s >= 0.5 && s < 1) {
     scorul.monede += 50;
     scorul.loteriiCastigate++;
+    scorul.prietenie+=5
     verificaTrofee();
     alert('Congratulations! You won 50 coins');
-} else {
+    } else {
     alert('Sorry. You lost. You can try again');
-}
+    }
 
-document.querySelector('.text-scor').innerHTML = scorul.monede;
-localStorage.setItem('scorul', JSON.stringify(scorul));
-}
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+       document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
 
-function mancareaPreferata() {
+    function mancareaPreferata() {
     if( scorul.monede<100) {
     alert('You do not have enought coins.You need 100 coins')
-return
-}
-scorul.monede-=100
-scorul.fericire+=50
-if (scorul.fericire > 100) {scorul.fericire = 100}
-document.querySelector('.text-scor').innerHTML = scorul.monede;
+    return
+    }
+    scorul.monede-=100
+    scorul.fericire+=50
+    scorul.prietenie+=10
+    verificaTrofee();
+       document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    if (scorul.fericire > 100) {scorul.fericire = 100}
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
     document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
     localStorage.setItem('scorul', JSON.stringify(scorul));
-}
+    }
 
 
-function deschideCutia () {
+    function deschideCutia () {
     if( scorul.monede<80) {
 
-alert('You do not have enought coins.You need 80 coins')
-return
-}
-scorul.monede-=80
-scorul.huntIndex+=1;
-if(scorul.huntIndex>=3) {
-scorul.huntIndex=3;
-}
-document.querySelector('.huntParagraf').innerHTML = 
-`Treasure hunt--- ${scorul.huntIndex}/3`;
-let b= Math.random()
-if (b>=0 && b<0.23 ) {
-scorul.fericire+= 20
-alert('The happines level rised by 50 %')
-} else if(b>=0.23 && b<0.36) {
-scorul.monede+=15
-alert('Congradulations! You won 15 coins ')
+    alert('You do not have enought coins.You need 80 coins')
+    return
+    }
+    scorul.monede-=80
+    scorul.huntIndex+=1;
+    scorul.prietenie+=5
+    verificaTrofee();
+       document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    if(scorul.huntIndex>=3) {
+    scorul.huntIndex=3;
+    }
+    document.querySelector('.huntParagraf').innerHTML = 
+    `Treasure hunt--- ${scorul.huntIndex}/3`;
+    let b= Math.random()
+    if (b>=0 && b<0.23 ) {
+    scorul.fericire+= 20
+    alert('The happines level rised by 20 %')
+    } else if(b>=0.23 && b<0.36) {
+    scorul.monede+=15
+    alert('Congradulations! You won 15 coins ')
 
-}else if(b>=0.36 && b<0.40) {
-scorul.monede+=90
-alert('Congradulations! You won 90 coins ')
-} else if(b>=0.40 && b< 0.55) {
-scorul.fericire+= 70
-alert('The happines level rised by 70 %')
+    }else if(b>=0.36 && b<0.40) {
+    scorul.monede+=90
+    alert('Congradulations! You won 90 coins ')
+    } else if(b>=0.40 && b< 0.55) {
+    scorul.fericire+= 70
+    alert('The happines level rised by 70 %')
 
-} else if (b>=0.55 && b<1) {
-scorul.monede+=20
-alert('Congradulations! You won 20 coins ')
-} 
-if (scorul.fericire > 100) {scorul.fericire = 100}
-document.querySelector('.text-scor').innerHTML = scorul.monede;
+    } else if (b>=0.55 && b<1) {
+    scorul.monede+=20
+    alert('Congradulations! You won 20 coins ')
+    } 
+    if (scorul.fericire > 100) {scorul.fericire = 100}
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
     document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
     localStorage.setItem('scorul', JSON.stringify(scorul));
 
-}
+    }
 
-function dailyQuests() {
-        if(
-scorul.feedIndex===10 &&
-scorul.lotteryIndex===3 &&
-scorul.huntIndex===3 &&
-!scorul.dailyRewardClaimed
-){
+    function dailyQuests() {
+    if(
+    scorul.feedIndex===10 &&
+    scorul.lotteryIndex===3 &&
+    scorul.huntIndex===3 &&
+    !scorul.dailyRewardClaimed
+    ){
 
     scorul.monede += 100;
+    scorul.prietenie+=25
     scorul.dailyRewardClaimed = true;
-
+verificaTrofee();
     document.querySelector('.feedParagraf').innerHTML =
     `Feed--- ${scorul.feedIndex}/10 ✅ Completed`;
 
@@ -1261,18 +2904,18 @@ scorul.huntIndex===3 &&
     `Treasure hunt--- ${scorul.huntIndex}/3 ✅ Completed`;
 
     document.querySelector('.text-scor').innerHTML = scorul.monede;
-
+   document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
     localStorage.setItem('scorul', JSON.stringify(scorul));
 
     alert("🎉 Daily quests completed! +100 coins");
-}else {
+    }else {
     alert("❌ You should complete all quests first!");
-}
-}
-function resetareaZilei () {
+    }
+    }
+    function resetareaZilei () {
     let acum = Date.now()
-        let diferenta = acum - scorul.dailyLastReset;
-        if(diferenta >= 86400000) {
+    let diferenta = acum - scorul.dailyLastReset;
+    if(diferenta >= 86400000) {
 
     scorul.feedIndex = 0;
     scorul.lotteryIndex = 0;
@@ -1291,76 +2934,102 @@ function resetareaZilei () {
     document.querySelector('.huntParagraf').innerHTML =
     `Treasure hunt--- ${scorul.huntIndex}/3`;
     document.querySelector('.feedParagraf').classList.remove('quest-completed');
-document.querySelector('.loteryParagraf').classList.remove('quest-completed');
-document.querySelector('.huntParagraf').classList.remove('quest-completed');
+    document.querySelector('.loteryParagraf').classList.remove('quest-completed');
+    document.querySelector('.huntParagraf').classList.remove('quest-completed');
 
     localStorage.setItem('scorul', JSON.stringify(scorul));
-}
+    }
+
+    }
+
+    resetareaZilei();
+    setInterval(resetareaZilei, 60000);
+
+    function dailyReward(){
+
+    let azi = new Date().toDateString();
+
+    if(scorul.dailyLoginDate !== azi){
+
+        scorul.monede += 20;
+
+        scorul.dailyLoginDate = azi;
+
+        document.getElementById("dailyRewardPopup").style.display="flex";
+
+        document.querySelector('.text-scor').innerHTML = scorul.monede;
+
+        localStorage.setItem('scorul', JSON.stringify(scorul));
+    }
 
 }
 
-resetareaZilei();
-setInterval(resetareaZilei, 60000);
+    function resetareaJocului() {
+    if(scorul.fericire >= 100) {
+    scorul.nivel = (scorul.nivel || 1) + 1;
+    scorul.monede = (Number(scorul.monede) || 0) + 50;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
 
-function resetareaJocului() {
-if(scorul.fericire >= 100) {
-scorul.nivel = (scorul.nivel || 1) + 1;
-scorul.monede = (Number(scorul.monede) || 0) + 50;
-document.querySelector('.text-scor').innerHTML = scorul.monede;
-localStorage.setItem('scorul', JSON.stringify(scorul));
-document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
-document.querySelector('.rezultat').innerHTML = "🎉 You won! Capy is 100% happy! 🥳 Game will restart in 8 seconds...";
-setTimeout(function(){
-reseteazaJocul(); 
-}, 8000);
-} else if(scorul.fericire <= 0){
+    verificaTrofee();
+    document.querySelector('.text-scor').innerHTML = scorul.monede;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+    document.querySelector('.rezultat').innerHTML = "🎉 You won! Capy is 100% happy! 🥳 Game will restart in 8 seconds...";
+    setTimeout(function(){
+    reseteazaJocul(); 
+    }, 8000);
+    } else if(scorul.fericire <= 0){
     scorul.monede-=10
-document.querySelector('.rezultat').innerHTML = "😢You lost... Capy went to sleep. Game will restart in 8 seconds...";
-setTimeout(function() {
-reseteazaJocul();
-}, 8000);
-}
-}
-let valoareInput=document.querySelector('.js-input')
+    document.querySelector('.rezultat').innerHTML = "😢You lost... Capy went to sleep. Game will restart in 8 seconds...";
+    setTimeout(function() {
+    reseteazaJocul();
+    }, 8000);
+    }
+    }
+    let valoareInput=document.querySelector('.js-input')
 
-function inputulJucator() {
+    function inputulJucator() {
     if (valoareInput.value.trim() === "") {
     alert("Write a treat first!");
     return;
-}
+    }
     let container = document.querySelector('.capybara-scene');
-let imagineCapibara= document.querySelector('.capibara')
-let valoareJucator = valoareInput.value;
-let n= Math.random()
-if(n>=0.5 && n<1) {
-mesaj=`I love you!😍😍😍${valoareJucator} was very good!🤗🤗🤗`
-scorul.fericire+=15
-imagineCapibara.src="images/happy-capy.png"
-container.className = "capybara-scene happy-mode";
-}
+    let imagineCapibara= document.querySelector('.capibara')
+    let valoareJucator = valoareInput.value;
+    let n= Math.random()
+    if(n>=0.5 && n<1) {
+    mesaj=`I love you!😍😍😍${valoareJucator} was very good!🤗🤗🤗`
+    scorul.fericire+=15
+    scorul.prietenie+=10
+    imagineCapibara.src="images/happy-capy.png"
+    container.className = "capybara-scene happy-mode";
+       document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    }
 
-else {
-scorul.fericire-=2
-mesaj=`I dont want ${valoareJucator}! I want something else!`
-imagineCapibara.src="images/capy-sad-image.png"
-container.className = "capybara-scene sad-mode";
-}
-if (scorul.fericire > 100) {
-scorul.fericire = 100;
-}
-if (scorul.fericire < 0) {
-scorul.fericire = 0;
-}
-document.querySelector('.rezultat').innerHTML = mesaj;
+    else {
+    scorul.fericire-=2
+    scorul.prietenie-=5
+    mesaj=`I dont want ${valoareJucator}! I want something else!`
+    imagineCapibara.src="images/capy-sad-image.png"
+    container.className = "capybara-scene sad-mode";
+       document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
+    }
+    if (scorul.fericire > 100) {
+    scorul.fericire = 100;
+    }
+    if (scorul.fericire < 0) {
+    scorul.fericire = 0;
+    }
+    document.querySelector('.rezultat').innerHTML = mesaj;
 
-document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
+    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
 
-localStorage.setItem('scorul', JSON.stringify(scorul));
+    localStorage.setItem('scorul', JSON.stringify(scorul));
 
-valoareInput.value = ""; 
-verificaTrofee();
-resetareaJocului() 
-}   
-</script>
-</body>
-</html>
+    valoareInput.value = ""; 
+    verificaTrofee();
+    resetareaJocului() 
+    }   
+    </script>
+    </body>
+    </html>
