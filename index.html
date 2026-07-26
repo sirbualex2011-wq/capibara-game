@@ -2387,14 +2387,18 @@ verificaGradina();
 
 function hranesteCapibara (hrana) {
        alert("START");
-
+console.log(scorul);
+console.log(scorul.gusturiDescoperite);
 let container = document.querySelector('.capybara-scene');
 alert("CONTAINER " + container);
 
 let imagineCapibara = document.getElementById('capy-image');
 alert("IMAGE " + imagineCapibara);
-  
+    
     let numar= Math.random()
+alert("random ok");
+
+alert(JSON.stringify(scorul.gusturiDescoperite));
 
     if (numar>=0 && numar<0.23 ) {
     preferinta='apple'
@@ -2414,6 +2418,7 @@ alert("IMAGE " + imagineCapibara);
     }
 
     if(preferinta===hrana) {
+        alert("INTRAT IN IF");
     mesaj= `I love you!😍😍😍${hrana} was very good!🤗🤗🤗`
     document.getElementById('capy-image').src = "images/happy-capy.png";
     container.className = "capybara-scene happy-mode";
@@ -2461,6 +2466,7 @@ document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${
     localStorage.setItem('scorul', JSON.stringify(scorul));
     }
     } else{
+        alert("INTRAT IN ELSE");
     mesaj=`I don't want ${hrana}! I want something else!`
     document.getElementById('capy-image').src = "images/capy-sad-image.png";
     container.className = "capybara-scene sad-mode";
@@ -2510,7 +2516,9 @@ document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${
     }
     }
     verificaTrofee();
+    alert("a trecut de trofee");
     resetareaJocului();
+    alert("a trecut de reset");
    
     }
 
