@@ -2339,7 +2339,72 @@ JSON.stringify(scorul)
     let preferinta=''
     let mesaj=''
 
-    function hranesteCapibara (hrana) {
+    
+
+    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
+    setInterval(function() {
+    if(scorul.fericire>0 && scorul.fericire<100) {
+    scorul.fericire-=20;
+    }
+    if(scorul.fericire<0) {
+    scorul.fericire=0
+    }
+
+    document.querySelector('.js-fericire')
+    .innerHTML = `Happines: ${scorul.fericire}%`;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+    resetareaJocului()
+    },10800000  );
+
+    function reseteazaJocul() {
+    scorul.fericire = 50;
+    scorul.placut = 0;
+    scorul.neplacut = 0;
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+
+    document.querySelector('.rezultat').innerHTML = ""; 
+    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`; 
+    document.querySelector('.js-scorul').innerHTML = `I liked:${scorul.placut}  I didn't like:${scorul.neplacut}`; 
+
+    let container = document.querySelector('.capybara-scene');
+    container.className = "capybara-scene";
+
+    let imagineCapibara = document.querySelector('.capibara');
+    imagineCapibara.src = "images/capy-image-5.png";
+    document.getElementById('hat-layer').style.display =
+    scorul.areCaciula ? "block" : "none";
+
+    document.getElementById('shirt-layer').style.display =
+    scorul.areTricou ? "block" : "none";
+
+    document.getElementById('glasses-layer').style.display =
+    scorul.areOchelari ? "block" : "none";
+    }
+    function magazinulHaine() {
+    let panel = document.getElementById('magazinDeHaine');
+    if (panel.style.display === 'block') {
+    panel.style.display = 'none';
+    } else {
+    panel.style.display = 'block';
+    }
+    }
+function deschideGradina(){
+
+let panel=document.getElementById("gardenPanel");
+
+
+if(panel.style.display=="block"){
+
+panel.style.display="none";
+
+}else{
+
+panel.style.display="block";
+}
+verificaGradina();
+}
+
+function hranesteCapibara (hrana) {
         alert("button works " + hrana);
     let container = document.querySelector('.capybara-scene');
     let imagineCapibara = document.getElementById('capy-image');
@@ -2463,71 +2528,9 @@ document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${
    
     }
 
-    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`;
-    setInterval(function() {
-    if(scorul.fericire>0 && scorul.fericire<100) {
-    scorul.fericire-=20;
-    }
-    if(scorul.fericire<0) {
-    scorul.fericire=0
-    }
-
-    document.querySelector('.js-fericire')
-    .innerHTML = `Happines: ${scorul.fericire}%`;
-    localStorage.setItem('scorul', JSON.stringify(scorul));
-    resetareaJocului()
-    },10800000  );
-
-    function reseteazaJocul() {
-    scorul.fericire = 50;
-    scorul.placut = 0;
-    scorul.neplacut = 0;
-    localStorage.setItem('scorul', JSON.stringify(scorul));
-
-    document.querySelector('.rezultat').innerHTML = ""; 
-    document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`; 
-    document.querySelector('.js-scorul').innerHTML = `I liked:${scorul.placut}  I didn't like:${scorul.neplacut}`; 
-
-    let container = document.querySelector('.capybara-scene');
-    container.className = "capybara-scene";
-
-    let imagineCapibara = document.querySelector('.capibara');
-    imagineCapibara.src = "images/capy-image-5.png";
-    document.getElementById('hat-layer').style.display =
-    scorul.areCaciula ? "block" : "none";
-
-    document.getElementById('shirt-layer').style.display =
-    scorul.areTricou ? "block" : "none";
-
-    document.getElementById('glasses-layer').style.display =
-    scorul.areOchelari ? "block" : "none";
-    }
-    function magazinulHaine() {
-    let panel = document.getElementById('magazinDeHaine');
-    if (panel.style.display === 'block') {
-    panel.style.display = 'none';
-    } else {
-    panel.style.display = 'block';
-    }
-    }
-function deschideGradina(){
-
-let panel=document.getElementById("gardenPanel");
 
 
-if(panel.style.display=="block"){
 
-panel.style.display="none";
-
-}else{
-
-panel.style.display="block";
-
-verificaGradina();
-
-}
-
-}
     function panelTrofee() {
     let panel = document.getElementById('trofeePanel');
     if (panel.style.display === 'block') {
