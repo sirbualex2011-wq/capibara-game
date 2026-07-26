@@ -1968,17 +1968,20 @@ if(!scorul.gusturiDescoperite){
     document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
     document.querySelector('.text-scor').innerHTML = scorul.monede;
     document.querySelector('.feedParagraf').innerHTML=scorul.feedIndex;
-    if (scorul.gusturiDescoperite === undefined) {
-    scorul.gusturiDescoperite = {
-        mar: false,
-        banana: false,
-        morcov: false,
-        apa: false,
-        capsuna: false
+    if(!scorul.gusturiDescoperite || typeof scorul.gusturiDescoperite !== "object"){
+    scorul.gusturiDescoperite={
+        mar:false,
+        banana:false,
+        morcov:false,
+        apa:false,
+        capsuna:false
     };
+     localStorage.setItem('scorul', JSON.stringify(scorul));
+
+}
 
     localStorage.setItem('scorul', JSON.stringify(scorul));
-}
+
 if (scorul.gardenReady== undefined) {
     scorul.gardenReady= false
     localStorage.setItem('scorul', JSON.stringify(scorul));
@@ -2112,13 +2115,23 @@ localStorage.setItem('scorul', JSON.stringify(scorul));
    
    window.onload = function() {
 
-incarcaHaine();
+    incarcaHaine();
+    verificaGradina();
 
-verificaGradina();
+    document.querySelector('.js-nivel').innerHTML =
+    `Level: ${scorul.nivel}`;
 
-document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
+    document.querySelector('.text-scor').innerHTML =
+    scorul.monede;
 
-document.querySelector('.text-scor').innerHTML = scorul.monede;
+    document.querySelector('.js-fericire').innerHTML =
+    `Happiness: ${scorul.fericire}%`;
+
+    document.querySelector('.prietenie-paragraf').innerHTML =
+    `❤️ Friendship: ${scorul.prietenie}%`;
+
+    document.querySelector('.js-scorul').innerHTML =
+    `I liked:${scorul.placut} I didn't like:${scorul.neplacut}`;
 
 };
 
@@ -2425,7 +2438,6 @@ alert(JSON.stringify(scorul.gusturiDescoperite));
     scorul.placut+=1
     scorul.fericire+=15
     scorul.prietenie+=5
-    verificaTrofee();
     if(scorul.feedIndex<10){
     scorul.feedIndex++;
     }
@@ -2457,7 +2469,7 @@ document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${
 
     scorul.monede += 20;
 scorul.prietenie+=10
-verificaTrofee();
+
     scorul.beginnerRewardClaimed = true;
 
     document.querySelector('.text-scor').innerHTML = scorul.monede;
@@ -2473,7 +2485,7 @@ document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${
     scorul.neplacut+=1
     scorul.fericire-=2;
     scorul.prietenie-=5
-    verificaTrofee();
+
     if(scorul.feedIndex<10){
     scorul.feedIndex++;
     }
@@ -2516,10 +2528,21 @@ document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${
     }
     }
     verificaTrofee();
+    
     alert("a trecut de trofee");
     resetareaJocului();
     alert("a trecut de reset");
    
+localStorage.setItem(
+'scorul',
+JSON.stringify(scorul)
+);
+
+document.querySelector('.js-fericire').innerHTML =
+`Happiness: ${scorul.fericire}%`;
+
+document.querySelector('.prietenie-paragraf').innerHTML =
+`❤️ Friendship: ${scorul.prietenie}%`;
     }
 
 
