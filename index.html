@@ -1605,7 +1605,7 @@ font-weight:bold;
    <title>My Capybara 🐹 - Virtual Pet Game with Garden, Quests & Achievements</title>
 
 <link rel="icon" type="image/png" href="images/capy-first-img.png">
-<meta name="viewport" content="width=device-width, initial-scale=0.8">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
 
 <meta name="description" content="Raise your own virtual capybara! Feed Capy, grow a garden, unlock cute outfits, complete daily quests, collect achievements and build a friendship. 🐹❤️">
 
@@ -1635,7 +1635,8 @@ font-weight:bold;
     👕 Customize with clothes
     🏆 Unlock achievements
     🎁 Complete daily quests</p>
-    <button class="start-button" onclick="startGame()">🟢 START PLAYING</button>
+    <button class="start-button" onclick="startGame()"
+    ontouchstart="startGame()">🟢 START PLAYING</button>
     </div>
 <div id="dailyRewardPopup" class="daily-reward-popup">
 
@@ -1651,7 +1652,8 @@ font-weight:bold;
             🪙 +10 coins
         </p>
 
-        <button onclick="closeDailyReward()" class="reward-button">
+        <button onclick="closeDailyReward()" class="reward-button"
+       ontouchstart="closeDailyReward()" >
             Claim Reward 🎁
         </button>
 
@@ -1671,24 +1673,31 @@ font-weight:bold;
     <div class="leaf leaf2">🍃</div>
     <div class="leaf leaf3">🌱</div>
 
-    <button class="buton-shop" onclick="magazinul()">🛒 Shop</button>
+    <button class="buton-shop" onclick="magazinul()"
+    ontouchstart="magazinul()">🛒 Shop</button>
 
     <div id="shopPanel" class="shop-panel">
     <div class="shop-content">
     <h2>Capy Shop</h2>
     <div class="shop-items">
-    <button onclick="mancareaPreferata()" class="button-s">Super Food</button>
-    <button onclick=" deschideCutia ()"class="button-s">Treasure hunt</button>
-    <button onclick="lotereie()"class="button-s">Lottery</button>
-    <button onclick="cumparaGradina()" class="button-s">
+    <button onclick="mancareaPreferata()" class="button-s"
+    ontouchstart="mancareaPreferata()">Super Food</button>
+    <button onclick=" deschideCutia ()"class="button-s"
+    ontouchstart="deschideCutia ()">Treasure hunt</button>
+    <button onclick="lotereie()"class="button-s"
+    ontouchstart="lotereie()">Lottery</button>
+    <button onclick="cumparaGradina()" class="button-s"
+    ontouchstart="cumparaGradina()">
 🌱 Buy Garden 300
 </button>
     </div>
-    <button onclick="magazinul()"class="exit-button">Exit the Shop</button>
+    <button onclick="magazinul()"class="exit-button"
+    ontouchstart="magazinul()">Exit the Shop</button>
     </div>
     </div>
 
-    <button class="buton-shopClothes" onclick="magazinulHaine()" style="top: 200px;">
+    <button class="buton-shopClothes" onclick="magazinulHaine()" style="top: 200px;"
+    ontouchstart="magazinulHaine()">
     👕 Clothes
     </button>
 
@@ -1699,26 +1708,31 @@ font-weight:bold;
     <h2>👕 Capy Clothes</h2>
 
     <div>
-    <button onclick="echipeazaHaina('hat')" class="buton-palarie">
+    <button onclick="echipeazaHaina('hat')" 
+    ontouchstart="echipeazaHaina('hat')" class="buton-palarie">
         🎩 Buy Hat (50 coins)
     </button>
     </div>
 
     <div>
-    <button onclick="echipeazaHaina('shirt')" class="buton-palarie">
+    <button onclick="echipeazaHaina('shirt')" class="buton-palarie"
+    ontouchstart="echipeazaHaina('shirt')">
         👕 Buy Shirt (50 coins)
     </button>
-    <button onclick="echipeazaHaina('glasses')" class="buton-palarie">Buy sunglasses🕶️ (50 coins)</button>
+    <button onclick="echipeazaHaina('glasses')" class="buton-palarie"
+    ontouchstart="echipeazaHaina('glasses')">Buy sunglasses🕶️ (50 coins)</button>
     </div>
 
     <div>
-    <button onclick="removeClothes()" class="remove-buton">
+    <button onclick="removeClothes()" class="remove-buton"
+    ontouchstart="removeClothes()">
         ❌ Remove Clothes (+100 coins)
     </button>
     </div>
 
     <div>
-    <button onclick="magazinulHaine()" class="exit-button">
+    <button onclick="magazinulHaine()" class="exit-button"
+    ontouchstart="magazinulHaine()">
         Exit Clothes
     </button>
     </div>
@@ -1727,7 +1741,8 @@ font-weight:bold;
 
     </div>
 
-    <button class="buton-panel" onclick="panelTrofee()">
+    <button class="buton-panel" onclick="panelTrofee()"
+    ontouchstart="panelTrofee()">
     🏆 Trophies
     </button>
 
@@ -1740,14 +1755,16 @@ font-weight:bold;
 
     <div id="lista-trofee"></div>
 
-    <button onclick="panelTrofee()" class="exit-button">
+    <button onclick="panelTrofee()" class="exit-button"
+    ontouchstart="panelTrofee()">
     Exit the Trophies
     </button>
 
     </div>
 
     </div>
-<button class="garden-button" onclick="deschideGradina()">
+<button class="garden-button" onclick="deschideGradina()"
+ontouchstart="deschideGradina()">
 🌱Capy's garden
 </button>
 
@@ -1766,22 +1783,26 @@ font-weight:bold;
 <div class="plant-buttons">
 
 
-<button onclick="planteaza('carrot')">
+<button onclick="planteaza('carrot')"
+ontouchstart="planteaza('carrot')">
 🥕
 </button>
 
 
-<button onclick="planteaza('flower')">
+<button onclick="planteaza('flower')"
+ontouchstart="planteaza('flower')">
 🌻
 </button>
 
 
-<button onclick="planteaza('strawberry')">
+<button onclick="planteaza('strawberry')"
+ontouchstart="planteaza('strawberry')">
 🍓
 </button>
 
 
-<button onclick="planteaza('watermelon')">
+<button onclick="planteaza('watermelon')"
+ontouchstart="planteaza('watermelon')">
 🍉
 </button>
 
@@ -1789,12 +1810,14 @@ font-weight:bold;
 </div>
 
 
-<button class="collect-button" onclick="colecteazaRecompensa()">
+<button class="collect-button" onclick="colecteazaRecompensa()"
+ontouchstart="colecteazaRecompensa()">
 🎁 Collect
 </button>
 
 
-<button class="exit-button" onclick="deschideGradina()">
+<button class="exit-button" onclick="deschideGradina()"
+ontouchstart="deschideGradina()">
 Exit
 </button>
 
@@ -1802,7 +1825,8 @@ Exit
 </div>
 
 </div>
-    <button class="buton-quests" onclick="panelQuests()" >📋 Daily Quests</button>
+    <button class="buton-quests" onclick="panelQuests()" 
+    ontouchstart="panelQuests()">📋 Daily Quests</button>
     <div id="quests" class="quests-panel">
     <div class="quests-content">
     <h2> Daily Quests</h2>
@@ -1810,10 +1834,12 @@ Exit
     <p class="feedParagraf">Feed--- 0/10</p>
     <p class="loteryParagraf">Lottery---0/2</p>
     <p class="huntParagraf">Treasure hunt---0/3</p>
-    <button onclick="dailyQuests()" class="button-s">
+    <button onclick="dailyQuests()" class="button-s"
+    ontouchstart="dailyQuests()">
     Claim Reward 🎁
     </button>
-    <button onclick="panelQuests()" class="exit-button">Exit Daily Quests</button>
+    <button onclick="panelQuests()" class="exit-button"
+    ontouchstart="panelQuests()">Exit Daily Quests</button>
     </div>
     </div>
 
@@ -1838,41 +1864,33 @@ Exit
     style="display:none;">
     </div>
 
-    <button class="js-morcov buton"
-    onclick="
-    hranesteCapibara ('carrot')
-    "
-    ><img class="morcov" src="images\morcov-buton-image.png">
-    </button>
+    <button class="js-morcov buton" onclick="hranesteCapibara('carrot')" ontouchstart="hranesteCapibara('carrot')">
+    <img class="morcov" src="images\morcov-buton-image.png">
+</button>
 
-    <button class="js-mar buton"
-    onclick=" hranesteCapibara ('apple')"
-    ><img class="mar" src="images\mar-buton-image.png">
+<button class="js-mar buton" onclick="hranesteCapibara('apple')" ontouchstart="hranesteCapibara('apple')">
+    <img class="mar" src="images\mar-buton-image.png">
+</button>
 
-    </button>
+<button class="js-banana buton" onclick="hranesteCapibara('banana')" ontouchstart="hranesteCapibara('banana')">
+    <img class="banana" src="images/banana-buton-image.png">
+</button>
 
-    <button class="js-banana buton"
-    onclick=" hranesteCapibara ('banana')"
-    ><img class="banana" src="images/banana-buton-image.png">
-    </button>
+<button class="js-capsuna buton" onclick="hranesteCapibara('strawbery')" ontouchstart="hranesteCapibara('strawbery')">
+    <img class="capsuna" src="images/capsuna-buton-image.png">
+</button>
 
-    <button class="js-capsuna buton"
-    onclick=" hranesteCapibara ('strawbery')"
-    ><img class="capsuna" src="images/capsuna-buton-image.png">
-    </button>
-
-    <button class="js-apa buton"
-    onclick=" hranesteCapibara ('water')"
-    ><img class="apa" src="images/apa-buton-image.png">
-    </button>
-
+<button class="js-apa buton" onclick="hranesteCapibara('water')" ontouchstart="hranesteCapibara('water')">
+    <img class="apa" src="images/apa-buton-image.png">
+</button>
     <p class="js-nivel"></p>
 
     <p class="js-fericire"></p>
     <div class="container-input">
         <p class="prietenie-paragraf"></p>
     <input class="js-input" placeholder="Type the name of the treat" >
-    <button onclick="inputulJucator()" class="buton-feed">Feed Capy!</button>
+    <button onclick="inputulJucator()" class="buton-feed"
+    ontouchstart="inputulJucator()">Feed Capy!</button>
     </div>
     <p id="mesaj-afisat"></p>
     </div>
