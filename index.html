@@ -1965,7 +1965,16 @@ gardenReady:false,
 colector:0,
 beginnerQuest:0, 
     }
-
+if(!scorul.gusturiDescoperite){
+    scorul.gusturiDescoperite={
+        mar:false,
+        banana:false,
+        morcov:false,
+        apa:false,
+        capsuna:false
+    };
+    localStorage.setItem('scorul', JSON.stringify(scorul));
+}
     document.querySelector('.js-nivel').innerHTML = `Level: ${scorul.nivel}`;
     document.querySelector('.text-scor').innerHTML = scorul.monede;
     document.querySelector('.feedParagraf').innerHTML=scorul.feedIndex;
