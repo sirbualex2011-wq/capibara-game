@@ -1581,6 +1581,104 @@ color:white;
 font-weight:bold;
 
 }
+@media (max-width:768px){
+
+html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+}
+
+body{
+    overflow-x:hidden;
+    touch-action:manipulation;
+}
+
+
+*{
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+button{
+    min-height:52px;
+    touch-action:manipulation;
+}
+
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+
+input{
+    font-size:16px;
+}
+
+
+.shop-content,
+.shop-content-haine,
+.trofee-content,
+.quests-content,
+.garden-content{
+
+    max-height:85vh;
+    overflow-y:auto;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+.shop-panel,
+.shop-panel-haine,
+.trofee-panel,
+.quests-panel,
+.garden-panel{
+
+    overflow-y:auto;
+
+}
+
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+
+.morcov,
+.mar,
+.banana,
+.apa,
+.capsuna{
+
+    min-width:95px;
+    min-height:95px;
+
+}
+
+
+button,
+img{
+
+    user-select:none;
+    -webkit-user-select:none;
+
+}
+
+body,
+.shop-content,
+.shop-content-haine,
+.trofee-content,
+.quests-content,
+.garden-content{
+
+    scroll-behavior:smooth;
+
+}
+
+}
     </style> 
    <title>My Capybara 🐹 - Virtual Pet Game with Garden, Quests & Achievements</title>
 
