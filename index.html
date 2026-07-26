@@ -1598,105 +1598,66 @@ font-weight:bold;
 }
 
 @media (max-width:768px){
-.morcov, .mar, .banana, .apa, .capsuna {
-    touch-action: manipulation;
-    min-width: 95px;}
+
+    .buton-feed,
+    .buton-shop,
+    .buton-shopClothes,
+    .buton-panel,
+    .buton-quests,
+    .garden-button,
+    .start-button,
+    .button-s,
+    .exit-button,
+    .buton-palarie,
+    .remove-buton,
+    .reward-button,
+    .collect-button,
+    .plant-buttons button{
+
+        position:relative;
+        z-index:10000;
+        pointer-events:auto;
+        touch-action:manipulation;
+    }
 
 
-html{
-    scroll-behavior:smooth;
-    -webkit-text-size-adjust:100%;
-}
+    .morcov,
+    .mar,
+    .banana,
+    .apa,
+    .capsuna{
 
-body{
-    overflow-x:hidden;
-    touch-action:manipulation;
-}
+        position:relative;
+        z-index:10000;
+        pointer-events:auto;
+        touch-action:manipulation;
 
-
-*{
-    -webkit-tap-highlight-color:transparent;
-}
+    }
 
 
-button{
-    min-height:52px;
-    touch-action:manipulation;
-}
+    #hat-layer,
+    #shirt-layer,
+    #glasses-layer,
+    #capy-image,
+    #capy-sad-image{
+
+        pointer-events:none;
+
+    }
 
 
-img{
-    max-width:100%;
-    height:auto;
-}
+    .capybara-scene{
+
+        z-index:1;
+
+    }
 
 
-input{
-    font-size:16px;
-}
+    .js-monede{
 
+        z-index:10001;
 
-.shop-content,
-.shop-content-haine,
-.trofee-content,
-.quests-content,
-.garden-content{
-
-    max-height:85vh;
-    overflow-y:auto;
-
-    -webkit-overflow-scrolling:touch;
-
-}
-
-.shop-panel,
-.shop-panel-haine,
-.trofee-panel,
-.quests-panel,
-.garden-panel{
-
-    overflow-y:auto;
-
-}
-
-
-button:active{
-
-    transform:scale(.97);
-
-}
-
-
-.morcov,
-.mar,
-.banana,
-.apa,
-.capsuna{
-
-    min-width:95px;
-    min-height:95px;
-
-}
-
-
-button,
-img{
-
-    user-select:none;
-    -webkit-user-select:none;
-
-}
-
-body,
-.shop-content,
-.shop-content-haine,
-.trofee-content,
-.quests-content,
-.garden-content{
-
-    scroll-behavior:smooth;
-
-}
+    }
 
 }
     </style> 
