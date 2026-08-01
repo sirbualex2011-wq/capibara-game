@@ -2188,9 +2188,11 @@ location.reload();
 }
 
 function sentProgres() {
-    let text = `🐹 My Capy is at Level ${scorul.nivel} with ${scorul.prietenie}% friendship and ${scorul.monede} coins! Come raise your own capybara! 🥕`;
+   let text = `🐹 My Capy is at Level ${scorul.nivel} with ${scorul.prietenie}% friendship and ${scorul.monede} coins! Come raise your own capybara! 🥕`;
 
-    if (navigator.share) {
+    let esteMobil = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if (navigator.share && esteMobil) {
         navigator.share({
             title: "My Capybara 🐹",
             text: text,
@@ -2216,6 +2218,7 @@ function sentProgres() {
             alert("Could not copy automatically. Here's your text: " + text);
         });
 }
+
 function trimiteFeedback() {
 if (scorul.feedbackTrimis) {
 alert("You already claimed your feedback reward. Thank you! 🐹");
