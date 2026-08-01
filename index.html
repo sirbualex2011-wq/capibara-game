@@ -2588,8 +2588,6 @@
 
     function reseteazaJocul() {
     scorul.fericire = 50;
-    scorul.placut = 0;
-    scorul.neplacut = 0;
     localStorage.setItem('scorul', JSON.stringify(scorul));
     document.querySelector('.rezultat').innerHTML = ""; 
     document.querySelector('.js-fericire').innerHTML = `Happines: ${scorul.fericire}%`; 
