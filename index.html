@@ -2188,31 +2188,35 @@ location.reload();
 }
 
 function sentProgres() {
-let text = `🐹 My Capy is at Level ${scorul.nivel} with ${scorul.prietenie}% friendship and ${scorul.monede} coins! Come raise your own capybara! 🥕`;
-if (navigator.share) {
-    scorul.capySented=true
-navigator.share({
-title: "My Capybara 🐹",
-text: text,
-url: location.href
-}).catch(function(err) {
-console.log("Share cancelled or failed:", err);
-});
-return;
-} else {
-navigator.clipboard.writeText(text + " " + location.href)
-.then(function() {
-alert("📋 Copied to clipboard! Paste it anywhere to share your Capy 🐹");
-scorul.capySented=true
-})
-.catch(function() {
-alert("Could not copy automatically. Here's your text:" + text);
-});
-}
-verificaTrofee();
-localStorage.setItem('scorul', JSON.stringify(scorul));
-}
+    let text = `🐹 My Capy is at Level ${scorul.nivel} with ${scorul.prietenie}% friendship and ${scorul.monede} coins! Come raise your own capybara! 🥕`;
 
+    if (navigator.share) {
+        navigator.share({
+            title: "My Capybara 🐹",
+            text: text,
+            url: location.href
+        }).then(function() {
+            scorul.capySented = true;
+            verificaTrofee();
+            localStorage.setItem('scorul', JSON.stringify(scorul));
+        }).catch(function(err) {
+            if (err.name !== "AbortError") {
+                alert("Sharing isn't available right now. Try the copy option instead!");
+            }
+        });
+    } else {
+        navigator.clipboard.writeText(text + " " + location.href)
+            .then(function() {
+                alert("📋 Copied to clipboard! Paste it anywhere to share your Capy 🐹");
+                scorul.capySented = true;
+                verificaTrofee();
+                localStorage.setItem('scorul', JSON.stringify(scorul));
+            })
+            .catch(function() {
+                alert("Could not copy automatically. Here's your text: " + text);
+            });
+    }
+}
 function trimiteFeedback() {
 if (scorul.feedbackTrimis) {
 alert("You already claimed your feedback reward. Thank you! 🐹");
