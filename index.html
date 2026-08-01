@@ -2200,22 +2200,21 @@ function sentProgres() {
             verificaTrofee();
             localStorage.setItem('scorul', JSON.stringify(scorul));
         }).catch(function(err) {
-            if (err.name !== "AbortError") {
-                alert("Sharing isn't available right now. Try the copy option instead!");
-            }
+            console.log("Share cancelled or failed:", err);
         });
-    } else {
-        navigator.clipboard.writeText(text + " " + location.href)
-            .then(function() {
-                alert("📋 Copied to clipboard! Paste it anywhere to share your Capy 🐹");
-                scorul.capySented = true;
-                verificaTrofee();
-                localStorage.setItem('scorul', JSON.stringify(scorul));
-            })
-            .catch(function() {
-                alert("Could not copy automatically. Here's your text: " + text);
-            });
+        return;
     }
+
+    navigator.clipboard.writeText(text + " " + location.href)
+        .then(function() {
+            alert("📋 Copied to clipboard! Paste it anywhere to share your Capy 🐹");
+            scorul.capySented = true;
+            verificaTrofee();
+            localStorage.setItem('scorul', JSON.stringify(scorul));
+        })
+        .catch(function() {
+            alert("Could not copy automatically. Here's your text: " + text);
+        });
 }
 function trimiteFeedback() {
 if (scorul.feedbackTrimis) {
