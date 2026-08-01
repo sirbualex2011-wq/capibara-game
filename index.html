@@ -2547,8 +2547,6 @@ document.querySelector('.rezultat').innerHTML = mesaj;
 document.querySelector('.js-fericire').innerHTML =
 `Happines: ${scorul.fericire}%`;
 
-document.querySelector('.js-scorul').innerHTML =
-`I liked:${scorul.placut} I didn't like:${scorul.neplacut}`;
 
 document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship: ${scorul.prietenie}%`;
 
@@ -2607,8 +2605,6 @@ localStorage.setItem('scorul',JSON.stringify(scorul))
 document.querySelector('.js-scorul')
 .innerHTML=`I liked:${scorul.placut}  I didn't like :${scorul.neplacut}`
 localStorage.setItem('scorul', JSON.stringify(scorul))
-document.querySelector('.js-scorul')
-.innerHTML= `I liked:${scorul.placut} I didn't like:${scorul.neplacut}`
 document.querySelector('.prietenie-paragraf').innerHTML = `❤️ Friendship:${scorul.prietenie}%`;
 if(scorul.beginnerQuest === 3 && !scorul.beginnerRewardClaimed){
 alert("🎉 Beginner Quest Complete! Reward: +20 coins ");
@@ -2770,7 +2766,7 @@ document.getElementById("coinSound").play();
 }
 scorul.prietenie+=20
 alert("🏆 Achievement Unlocked: Gurmand! You won 120 coins!");
-}  if(!scorul.achievements.fashionIcon&& scorul.areCaciula && scorul.areTricou && scorul.areOchelari && acorul.areCoroana) {
+}  if(!scorul.achievements.fashionIcon&& scorul.areCaciula && scorul.areTricou && scorul.areOchelari && scorul.areCoroana) {
 scorul.achievements.fashionIcon=true
 scorul.monede += 200;
 if(sound.sunetPornit){
@@ -3329,6 +3325,7 @@ reseteazaJocul();
 }, 8000);
 } else if(scorul.fericire <= 0){
 scorul.monede-=10
+ if(scorul.monede < 0) { scorul.monede = 0; }
 document.querySelector('.rezultat').innerHTML = "😢You lost... Capy went to sleep. Game will restart in 8 seconds...";
 setTimeout(function() {
 reseteazaJocul();
